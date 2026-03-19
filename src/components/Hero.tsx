@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { ChevronRight } from "lucide-react";
 import appStoreBadge from "@/assets/app-store-badge.png";
 import vellicLogoBg from "@/assets/vellic-logo-bg.png";
 import { useTranslations, useLocale } from "@/i18n/useTranslations";
@@ -60,9 +61,13 @@ const Hero = () => {
           transition={{ delay: 0.2, duration: 0.7, ease }}
           className="flex justify-center mb-12"
         >
-          <a href="#" className="inline-block">
+          <a href="#" className="hidden md:inline-block">
             <img src={appStoreBadge} alt={t.hero.appStoreAlt} className="h-14 w-auto" />
           </a>
+          <button className="md:hidden rounded-full font-semibold text-foreground btn-gradient-animate flex items-center gap-1.5 px-8 py-3.5 text-lg">
+            {t.nav.downloadApp}
+            <ChevronRight size={20} />
+          </button>
         </motion.div>
 
         <motion.div

@@ -248,10 +248,14 @@ const Navbar = () => {
               ))}
 
 
-              <motion.div variants={itemVariant} className="mt-6 flex justify-center w-full">
-                <a href="#" className="inline-block" onClick={() => setMobileOpen(false)}>
-                  <img src={appStoreBadge} alt={t.nav.downloadApp} className="h-[52px] w-auto" />
-                </a>
+              <motion.div variants={itemVariant} className="mt-4 w-full flex justify-center">
+                <button
+                  className="rounded-full font-semibold text-foreground btn-gradient-animate flex items-center gap-1.5 px-8 py-3.5 text-lg"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {t.nav.downloadApp}
+                  <ChevronRight size={18} />
+                </button>
               </motion.div>
             </motion.div>
           </motion.div>
