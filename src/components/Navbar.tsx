@@ -143,8 +143,12 @@ const Navbar = () => {
 
             <motion.button
               whileTap={{ scale: 0.95 }}
-              className="rounded-full font-semibold text-foreground hover:opacity-90 transition-opacity"
-              style={{ background: "linear-gradient(135deg, hsl(var(--vita-periwinkle)), hsl(var(--primary) / 0.35))" }}
+              whileHover={{ backgroundImage: "linear-gradient(225deg, hsl(var(--primary) / 0.5), hsl(var(--vita-periwinkle)), hsl(var(--primary) / 0.35))" }}
+              className="rounded-full font-semibold text-foreground"
+              style={{
+                backgroundImage: "linear-gradient(135deg, hsl(var(--vita-periwinkle)), hsl(var(--primary) / 0.35))",
+                backgroundSize: "200% 200%",
+              }}
               animate={{
                 paddingLeft: scrolled ? "1.5rem" : "2rem",
                 paddingRight: scrolled ? "1.5rem" : "2rem",
