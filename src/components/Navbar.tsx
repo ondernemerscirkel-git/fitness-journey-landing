@@ -75,7 +75,8 @@ const Navbar = () => {
 
           <motion.button
             whileTap={{ scale: 0.95 }}
-            className="hidden md:block bg-foreground text-background rounded-full font-semibold hover:opacity-90 transition-opacity"
+            className="hidden md:block rounded-full font-semibold text-foreground hover:opacity-90 transition-opacity"
+            style={{ background: "linear-gradient(135deg, hsl(var(--vita-periwinkle)), hsl(var(--primary) / 0.35))" }}
             animate={{
               paddingLeft: scrolled ? "1.5rem" : "2rem",
               paddingRight: scrolled ? "1.5rem" : "2rem",
