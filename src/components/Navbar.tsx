@@ -168,7 +168,16 @@ const Navbar = () => {
                 </motion.a>
               ))}
 
-              <motion.div variants={itemVariant} className="mt-8">
+              <motion.button
+                variants={itemVariant}
+                onClick={() => { toggleLanguage(); setMobileOpen(false); }}
+                className="mt-4 flex items-center gap-2 text-muted-foreground font-body text-lg border border-border rounded-full px-6 py-2.5 hover:text-foreground transition-colors"
+              >
+                <Globe size={18} />
+                {locale === "en" ? "Nederlands" : "English"}
+              </motion.button>
+
+              <motion.div variants={itemVariant} className="mt-4">
                 <a href="#" className="inline-block">
                   <img src={appStoreBadge} alt={t.hero.appStoreAlt} className="h-12 w-auto" />
                 </a>
