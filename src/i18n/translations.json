@@ -2,7 +2,7 @@
   "en": {
     "nav": {
       "brand": "Vellic",
-      "links": ["Home", "Features", "Pricing", "Testimonials"],
+      "links": ["Home", "Features", "What's Included", "Testimonials"],
       "downloadApp": "Download App"
     },
     "hero": {
