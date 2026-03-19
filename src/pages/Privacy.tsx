@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
+import { useLocale } from "@/i18n/useTranslations";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 const fadeIn = {
@@ -11,8 +13,42 @@ const fadeIn = {
 };
 
 const Privacy = () => {
+  const locale = useLocale();
+  const seo = {
+    en: {
+      title: "Privacy Policy | Leanify",
+      description:
+        "Read how Leanify collects, uses, protects, and manages personal data across its fitness tracking platform.",
+      path: "/privacy",
+    },
+    nl: {
+      title: "Privacybeleid | Leanify",
+      description:
+        "Lees hoe Leanify persoonsgegevens verzamelt, gebruikt, beschermt en beheert binnen het fitnessplatform.",
+      path: "/nl/privacy",
+    },
+  } as const;
+  const currentSeo = seo[locale];
+
   return (
     <div className="bg-background text-foreground selection:bg-primary selection:text-primary-foreground">
+      <SEO
+        title={currentSeo.title}
+        description={currentSeo.description}
+        path={currentSeo.path}
+        locale={locale}
+        type="article"
+        keywords={["Leanify", "privacy policy", "fitness app privacy", "data protection"]}
+        alternateLanguages={{ en: "/privacy", nl: "/nl/privacy" }}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: currentSeo.title,
+          description: currentSeo.description,
+          url: currentSeo.path,
+          inLanguage: locale,
+        }}
+      />
       <Navbar />
       <section className="pt-40 pb-24 px-6 relative overflow-hidden">
         {/* Blobs */}

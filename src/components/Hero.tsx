@@ -40,7 +40,7 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto text-center relative z-10">
         <motion.h1
           {...fadeIn}
-          className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tight text-foreground mb-6"
+          className="text-[40px] leading-tight sm:text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tight text-foreground mb-6"
         >
           {t.hero.title1}
           <br />
