@@ -1,7 +1,7 @@
 {
   "en": {
     "nav": {
-      "brand": "Vellic.",
+      "brand": "Vellic",
       "links": ["Home", "Features", "Pricing", "Testimonials"],
       "downloadApp": "Download App"
     },
@@ -107,7 +107,7 @@
       ]
     },
     "footer": {
-      "brand": "Vellic.",
+      "brand": "Vellic",
       "tagline": "A calm, modern fitness platform built to help you train with clarity, consistency, and confidence.",
       "productHeading": "Product",
       "productLinks": ["Features", "Integrations", "Pricing", "Changelog"],
@@ -119,7 +119,7 @@
   },
   "nl": {
     "nav": {
-      "brand": "Vellic.",
+      "brand": "Vellic",
       "links": ["Home", "Functies", "Prijzen", "Getuigenissen"],
       "downloadApp": "Download App"
     },
@@ -229,7 +229,7 @@
       ]
     },
     "footer": {
-      "brand": "Vellic.",
+      "brand": "Vellic",
       "tagline": "Een rustig en modern fitnessplatform dat je helpt te trainen met helderheid, consistentie en vertrouwen.",
       "productHeading": "Product",
       "productLinks": ["Functies", "Integraties", "Prijzen", "Wijzigingslog"],
