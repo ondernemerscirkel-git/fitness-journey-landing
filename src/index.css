@@ -107,3 +107,22 @@
     font-variant-numeric: tabular-nums;
   }
 }
+
+@keyframes gradient-morph {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.btn-gradient-animate {
+  background: linear-gradient(135deg, hsl(var(--vita-periwinkle)), hsl(var(--primary) / 0.45), hsl(var(--vita-periwinkle)), hsl(var(--primary) / 0.35));
+  background-size: 300% 300%;
+  animation: gradient-morph 4s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+.btn-gradient-animate:hover {
+  background: hsl(var(--primary) / 0.15);
+  color: hsl(var(--primary));
+  animation: none;
+}
