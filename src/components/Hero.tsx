@@ -51,7 +51,7 @@ const Hero = () => {
         <motion.p
           {...fadeIn}
           transition={{ delay: 0.1, duration: 0.7, ease }}
-          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 font-body"
+          className="text-[13px] leading-relaxed md:text-xl md:leading-normal text-muted-foreground max-w-2xl mx-auto mb-8 md:mb-10 font-body px-4 md:px-0"
         >
           {t.hero.subtitle}
         </motion.p>
