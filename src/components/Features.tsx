@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { Activity, Utensils, TrendingUp, Bell } from "lucide-react";
+import { Activity, Target, TrendingUp, Bell } from "lucide-react";
 import { useState, useEffect } from "react";
 import type { ReactNode } from "react";
 
