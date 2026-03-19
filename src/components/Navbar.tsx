@@ -203,14 +203,22 @@ const Navbar = () => {
                 </motion.a>
               ))}
 
-              <motion.button
-                variants={itemVariant}
-                onClick={() => { toggleLanguage(); setMobileOpen(false); }}
-                className="mt-4 flex items-center gap-2 text-muted-foreground font-body text-lg border border-border rounded-full px-6 py-2.5 hover:text-foreground transition-colors"
-              >
-                <Globe size={18} />
-                {locale === "en" ? "Nederlands" : "English"}
-              </motion.button>
+              <motion.div variants={itemVariant} className="mt-4 flex flex-col items-center gap-2">
+                <button
+                  onClick={() => { switchTo("en"); setMobileOpen(false); }}
+                  className={`flex items-center gap-2 font-body text-lg px-6 py-2.5 rounded-full transition-colors ${locale === "en" ? "text-primary border border-primary/30" : "text-muted-foreground border border-border hover:text-foreground"}`}
+                >
+                  <Globe size={18} />
+                  English
+                </button>
+                <button
+                  onClick={() => { switchTo("nl"); setMobileOpen(false); }}
+                  className={`flex items-center gap-2 font-body text-lg px-6 py-2.5 rounded-full transition-colors ${locale === "nl" ? "text-primary border border-primary/30" : "text-muted-foreground border border-border hover:text-foreground"}`}
+                >
+                  <Globe size={18} />
+                  Nederlands
+                </button>
+              </motion.div>
 
               <motion.div variants={itemVariant} className="mt-4">
                 <a href="#" className="inline-block">
