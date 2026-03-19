@@ -114,8 +114,8 @@ const Privacy = () => {
               <h2 className="text-lg font-display font-semibold text-foreground mb-3">9. Contact Us</h2>
               <p>
                 If you have any questions about this Privacy Policy, please contact us at{" "}
-                <a href="mailto:privacy@vellic.app" className="text-primary hover:underline">
-                  privacy@vellic.app
+                <a href="mailto:privacy@leanify.io" className="text-primary hover:underline">
+                  privacy@leanify.io
                 </a>
               </p>
             </div>
