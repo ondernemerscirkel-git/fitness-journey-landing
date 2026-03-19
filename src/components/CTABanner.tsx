@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import appStoreBadge from "@/assets/app-store-badge.png";
 import { useTranslations } from "@/i18n/useTranslations";
 
 const fadeIn = {
@@ -27,7 +26,7 @@ const CTABanner = () => {
             {t.cta.heading2}
           </h2>
 
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6">
             <div className="bg-background p-4 rounded-3xl shadow-elevated">
               <div className="w-32 h-32 bg-foreground rounded-xl flex items-center justify-center">
                 <span className="text-[10px] text-background/40 uppercase tracking-widest font-body">
@@ -35,8 +34,11 @@ const CTABanner = () => {
                 </span>
               </div>
             </div>
-            <a href="#" className="inline-block">
-              <img src={appStoreBadge} alt={t.cta.appStoreAlt} className="h-14 w-auto" />
+            <a
+              href="#"
+              className="btn-gradient-animate rounded-full font-semibold px-8 py-4 text-lg"
+            >
+              {t.nav.downloadApp}
             </a>
           </div>
         </div>
