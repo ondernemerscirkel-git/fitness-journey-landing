@@ -96,7 +96,7 @@ const Navbar = () => {
             ))}
           </motion.div>
 
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-3">
             <div className="relative">
               <motion.button
                 whileTap={{ scale: 0.95 }}
