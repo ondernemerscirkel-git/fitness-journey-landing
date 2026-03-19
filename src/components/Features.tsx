@@ -135,7 +135,7 @@ const Features = () => {
 
         {/* Tablet/Mobile: cards grid + full-width phone */}
         <div className="lg:hidden flex flex-col gap-6">
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {t.features.cards.slice(0, 2).map((card, i) => (
               <FeatureCard key={i} icon={cardIcons[i]} title={card.title} desc={card.desc} />
             ))}
