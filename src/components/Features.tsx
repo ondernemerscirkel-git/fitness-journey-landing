@@ -33,7 +33,7 @@ const Features = () => (
   <section id="features" className="py-32 px-6 bg-foreground">
     <div className="max-w-7xl mx-auto">
       <motion.div {...fadeIn} className="text-center mb-20">
-        <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground">
+        <h2 className="text-4xl md:text-5xl font-display font-bold text-background">
           Everything You Need.
           <br />
           Nothing You Don't.
