@@ -33,7 +33,10 @@ const FeatureCard = ({ icon, title, desc }: FeatureCardProps) => (
   </motion.div>
 );
 
-const mockupImages = [mockupGuided, mockupExercise, mockupAnalytics, mockupLogbook, mockupWorkout];
+const Features = () => {
+  const t = useTranslations();
+  const locale = useLocale();
+  const mockupImages = screenshots[locale].mockups;
 const cardIcons = [
   <Activity size={22} />,
   <Utensils size={22} />,

@@ -73,8 +73,8 @@ const Hero = () => {
           className="relative max-w-5xl mx-auto"
         >
           <picture>
-            <source media="(min-width: 768px)" srcSet={heroDesktop} />
-            <img src={heroMobile} alt={t.hero.imageAlt} className="w-full h-auto relative z-10" />
+            <source media="(min-width: 768px)" srcSet={imgs.heroDesktop} />
+            <img src={imgs.heroMobile} alt={t.hero.imageAlt} className="w-full h-auto relative z-10" />
           </picture>
         </motion.div>
       </div>
