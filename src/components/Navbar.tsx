@@ -161,12 +161,6 @@ const Navbar = () => {
                   <img src={appStoreBadge} alt="Download on the App Store" className="h-12 w-auto" />
                 </a>
               </motion.div>
-
-              <motion.div variants={itemVariant} className="mt-4">
-                <a href="#" className="inline-block">
-                  <img src={appStoreBadge} alt="Download on the App Store" className="h-12 w-auto" />
-                </a>
-              </motion.div>
             </motion.div>
           </motion.div>
         )}
