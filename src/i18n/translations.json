@@ -103,11 +103,11 @@
       ]
     },
     "benefits": {
-      "heading": "Waarom Duizenden VITA Vertrouwen",
+      "heading": "Waarom VITA Gebruiken",
       "cards": [
-        { "title": "Privacy Eerst", "desc": "End-to-end versleutelde gezondheidsdata zonder delen met derden." },
-        { "title": "Directe Synchronisatie", "desc": "Naadloze integratie met Apple Health, Google Fit en 40+ wearables." },
-        { "title": "Holistische Gezondheid", "desc": "Volg slaap, stress, voeding en activiteit in één dashboard." }
+        { "title": "Donker Thema", "desc": "Een strak, modern donker design dat oogvermoeidheid vermindert en er prachtig uitziet. Elk scherm is ontworpen met een premium donkere esthetiek." },
+        { "title": "Makkelijk te Gebruiken", "desc": "Intuïtief ontwerp dat niet in de weg zit. Begin binnen seconden met het bijhouden van je workouts — geen leercurve, geen ingewikkelde setup." },
+        { "title": "Volg Alles", "desc": "Log elke set, herhaling en gewicht voor elke oefening. Volg je workout-aantal, volume, persoonlijke records en bekijk je voortgang in de tijd." }
       ]
     },
     "pricing": {
