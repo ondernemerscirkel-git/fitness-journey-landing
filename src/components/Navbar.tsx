@@ -159,7 +159,7 @@ const Navbar = () => {
           </div>
 
           <button
-            className="md:hidden text-foreground relative z-[60]"
+            className="lg:hidden text-foreground relative z-[60]"
             onClick={() => setMobileOpen(!mobileOpen)}
           >
             <AnimatePresence mode="wait">
