@@ -249,9 +249,12 @@ const Navbar = () => {
 
 
               <motion.div variants={itemVariant} className="mt-4">
-                <a href="#" className="inline-block">
-                  <img src={appStoreBadge} alt={t.hero.appStoreAlt} className="h-12 w-auto" />
-                </a>
+                <button
+                  className="rounded-full font-semibold text-foreground btn-gradient-animate flex items-center gap-1.5 px-8 py-3.5 text-lg"
+                >
+                  {t.nav.downloadApp}
+                  <ChevronRight size={18} />
+                </button>
               </motion.div>
             </motion.div>
           </motion.div>
