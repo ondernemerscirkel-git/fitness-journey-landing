@@ -7,63 +7,117 @@
     },
     "hero": {
       "title1": "Your Fitness Journey,",
-      "title2": "Anytime, Anywhere.",
-      "subtitle": "A precision-engineered platform for tracking, analyzing, and optimizing your physical performance. No fluff, just results.",
+      "title2": "At Your Own Pace.",
+      "subtitle": "A thoughtfully designed platform to help you track progress, build healthy routines, and stay connected to your goals — wherever life takes you.",
       "appStoreAlt": "Download on the App Store",
-      "imageAlt": "VITA fitness app screens showing workout tracking, progress analytics, and rest timer"
+      "imageAlt": "VITA fitness app screens showing workout tracking, progress insights, and a rest timer"
     },
     "features": {
       "heading1": "Everything You Need.",
-      "heading2": "Nothing You Don't.",
+      "heading2": "Designed to Feel Simple.",
       "cards": [
-        { "title": "Workout Tracking", "desc": "Real-time biometric sync with wearable devices." },
-        { "title": "Diet Plans", "desc": "AI-driven nutritional guidance tailored to goals." },
-        { "title": "Progress Analytics", "desc": "Deep-dive into your weekly performance trends." },
-        { "title": "Smart Reminders", "desc": "Context-aware alerts to keep you on schedule." }
+        {
+          "title": "Workout Tracking",
+          "desc": "Log your training with ease and sync key health data from compatible wearables."
+        },
+        {
+          "title": "Nutrition Guidance",
+          "desc": "Personalized food and nutrition support aligned with your lifestyle and goals."
+        },
+        {
+          "title": "Progress Insights",
+          "desc": "See meaningful trends over time and better understand how you're improving."
+        },
+        {
+          "title": "Smart Reminders",
+          "desc": "Gentle, timely prompts that help you stay consistent without feeling overwhelmed."
+        }
       ],
       "mockups": [
-        { "title": "Guided Programs", "desc": "Structured training cycles that adapt to your progress." },
-        { "title": "Exercise Library", "desc": "Detailed guides for every movement in your routine." },
-        { "title": "Progress Analytics", "desc": "Track your strength gains over time with clear charts." },
-        { "title": "Training Logbook", "desc": "Your complete workout history at a glance." },
-        { "title": "Live Tracking", "desc": "Log sets, reps, and rest in real time." }
+        { "title": "Guided Programs", "desc": "Follow structured training plans that adapt as you progress." },
+        {
+          "title": "Exercise Library",
+          "desc": "Explore clear, easy-to-follow guidance for every movement in your routine."
+        },
+        {
+          "title": "Progress Insights",
+          "desc": "Visualize strength, consistency, and milestones through clean, simple charts."
+        },
+        { "title": "Training Log", "desc": "Keep your full workout history organized and easy to revisit." },
+        {
+          "title": "Live Tracking",
+          "desc": "Record sets, reps, and rest in real time with a focused, distraction-free experience."
+        }
       ]
     },
     "benefits": {
-      "heading": "Why Use VITA",
+      "heading": "Why People Choose VITA",
       "cards": [
-        { "title": "Dark Theme", "desc": "A sleek, modern dark interface designed to reduce eye strain and look stunning. Every screen is crafted with a premium dark aesthetic." },
-        { "title": "Easy to Use", "desc": "Intuitive design that gets out of your way. Start tracking your workouts in seconds — no learning curve, no complicated setup." },
-        { "title": "Track Everything", "desc": "Log every set, rep, and weight for every exercise. Track workout count, volume, personal records, and watch your progress over time." }
+        {
+          "title": "Calm by Design",
+          "desc": "A clean, dark interface that feels modern, focused, and easy on the eyes — so you can stay present during every session."
+        },
+        {
+          "title": "Effortless to Use",
+          "desc": "Simple from the start. No steep learning curve, no unnecessary complexity — just a smooth experience that supports your routine."
+        },
+        {
+          "title": "Track What Matters",
+          "desc": "From sets and reps to volume and personal bests, VITA helps you keep a clear view of your progress over time."
+        }
       ]
     },
     "pricing": {
-      "badge": "100% Free — No Catches",
+      "badge": "Completely Free",
       "heading1": "Everything You Need,",
-      "heading2": "Completely Free",
-      "subtitle": "No subscriptions. No paywalls. No premium tiers. Every feature, every tool, every insight — yours from day one, forever.",
-      "features": ["Full Workout Library", "Advanced Analytics", "AI-Powered Benchpress"]
+      "heading2": "Included from Day One",
+      "subtitle": "No subscriptions, no hidden upgrades, and no locked features. Just a complete fitness experience designed to support you from the very beginning.",
+      "features": ["Complete Workout Library", "Advanced Progress Insights", "AI-Powered Bench Press Support"]
     },
     "cta": {
       "heading1": "Download VITA &",
-      "heading2": "Crush Your Goals",
+      "heading2": "Move Forward with Confidence",
       "qrLabel": "QR CODE",
       "appStoreAlt": "Download on the App Store"
     },
     "testimonials": {
-      "heading": "Real Athletes. Real Results.",
+      "heading": "Real People. Meaningful Progress.",
       "items": [
-        { "name": "Sarah K.", "role": "Marathon Runner", "quote": "VITA completely transformed my training regimen. The analytics alone are worth the subscription." },
-        { "name": "James R.", "role": "CrossFit Coach", "quote": "I recommend VITA to all my clients. The meal planning integration is seamless." },
-        { "name": "Maria L.", "role": "Yoga Instructor", "quote": "Finally, an app that understands holistic fitness. The sleep tracking is incredibly accurate." },
-        { "name": "David C.", "role": "Triathlete", "quote": "The wearable sync feature is flawless. I track every swim, ride, and run without friction." },
-        { "name": "Elena P.", "role": "Personal Trainer", "quote": "My clients love the progress reports. VITA makes me look like a data scientist." },
-        { "name": "Tom W.", "role": "Weekend Warrior", "quote": "Even as a casual athlete, VITA keeps me accountable. Best fitness investment I've made." }
+        {
+          "name": "Sarah K.",
+          "role": "Marathon Runner",
+          "quote": "VITA brought clarity to my training. I can see my progress more clearly and stay consistent without overthinking it."
+        },
+        {
+          "name": "James R.",
+          "role": "CrossFit Coach",
+          "quote": "It’s one of the few fitness apps that feels both powerful and easy to use. I’m happy to recommend it to my clients."
+        },
+        {
+          "name": "Maria L.",
+          "role": "Yoga Instructor",
+          "quote": "VITA feels balanced and thoughtful. It supports my overall wellness routine in a way that feels natural."
+        },
+        {
+          "name": "David C.",
+          "role": "Triathlete",
+          "quote": "Tracking my sessions is seamless. Everything I need is there, and nothing feels distracting or overbuilt."
+        },
+        {
+          "name": "Elena P.",
+          "role": "Personal Trainer",
+          "quote": "The progress summaries are clear, helpful, and easy to share. My clients feel more motivated when they can actually see how far they’ve come."
+        },
+        {
+          "name": "Tom W.",
+          "role": "Weekend Athlete",
+          "quote": "VITA helps me stay on track without making fitness feel complicated. It fits naturally into my week."
+        }
       ]
     },
     "footer": {
       "brand": "VITA.",
-      "tagline": "The precision fitness platform for the modern athlete. Built for performance, designed for clarity.",
+      "tagline": "A calm, modern fitness platform built to help you train with clarity, consistency, and confidence.",
       "productHeading": "Product",
       "productLinks": ["Features", "Integrations", "Pricing", "Changelog"],
       "connectHeading": "Connect",
@@ -79,68 +133,132 @@
       "downloadApp": "Download App"
     },
     "hero": {
-      "title1": "Jouw Fitnessreis,",
-      "title2": "Altijd en Overal.",
-      "subtitle": "Een precies ontworpen platform om je fysieke prestaties te volgen, analyseren en optimaliseren. Geen opvulling, alleen resultaten.",
+      "title1": "Jouw fitnessreis,",
+      "title2": "op jouw tempo.",
+      "subtitle": "Een zorgvuldig ontworpen platform dat je helpt om je voortgang bij te houden, gezonde routines op te bouwen en verbonden te blijven met je doelen — waar je ook bent.",
       "appStoreAlt": "Download in de App Store",
-      "imageAlt": "VITA fitness app schermen met workout tracking, voortgangsanalyse en rusttimer"
+      "imageAlt": "VITA fitness app schermen met workoutregistratie, voortgangsinzichten en een rusttimer"
     },
     "features": {
-      "heading1": "Alles Wat Je Nodig Hebt.",
-      "heading2": "Niets Wat Je Niet Nodig Hebt.",
+      "heading1": "Alles wat je nodig hebt.",
+      "heading2": "Ontworpen om eenvoudig te voelen.",
       "cards": [
-        { "title": "Workout Tracking", "desc": "Realtime biometrische synchronisatie met draagbare apparaten." },
-        { "title": "Dieetplannen", "desc": "AI-gestuurde voedingsadviezen afgestemd op jouw doelen." },
-        { "title": "Voortgangsanalyse", "desc": "Duik diep in je wekelijkse prestatie trends." },
-        { "title": "Slimme Herinneringen", "desc": "Contextbewuste meldingen om je op schema te houden." }
+        {
+          "title": "Workoutregistratie",
+          "desc": "Houd je trainingen moeiteloos bij en synchroniseer belangrijke gezondheidsgegevens met compatibele wearables."
+        },
+        {
+          "title": "Voedingsbegeleiding",
+          "desc": "Persoonlijke voedingsondersteuning afgestemd op jouw leefstijl en doelen."
+        },
+        {
+          "title": "Voortgangsinzichten",
+          "desc": "Ontdek betekenisvolle trends in de tijd en krijg beter inzicht in je ontwikkeling."
+        },
+        {
+          "title": "Slimme Herinneringen",
+          "desc": "Rustige, tijdige meldingen die je helpen consistent te blijven zonder te overweldigen."
+        }
       ],
       "mockups": [
-        { "title": "Begeleide Programma's", "desc": "Gestructureerde trainingsplannen die meegroeien met je voortgang." },
-        { "title": "Oefeningen Bibliotheek", "desc": "Gedetailleerde gidsen voor elke beweging in je routine." },
-        { "title": "Voortgangsanalyse", "desc": "Volg je krachtwinst in de tijd met duidelijke grafieken." },
-        { "title": "Trainingslogboek", "desc": "Je volledige trainingsgeschiedenis in één oogopslag." },
-        { "title": "Live Tracking", "desc": "Log sets, herhalingen en rust in realtime." }
+        {
+          "title": "Begeleide Programma’s",
+          "desc": "Volg gestructureerde trainingsschema’s die zich aanpassen aan jouw voortgang."
+        },
+        {
+          "title": "Oefeningenbibliotheek",
+          "desc": "Bekijk duidelijke en gemakkelijk te volgen uitleg voor elke oefening in je routine."
+        },
+        {
+          "title": "Voortgangsinzichten",
+          "desc": "Visualiseer kracht, consistentie en mijlpalen met heldere, eenvoudige grafieken."
+        },
+        {
+          "title": "Trainingslogboek",
+          "desc": "Bewaar je volledige trainingsgeschiedenis overzichtelijk op één plek."
+        },
+        {
+          "title": "Live Tracking",
+          "desc": "Registreer sets, herhalingen en rust in realtime in een rustige, gefocuste omgeving."
+        }
       ]
     },
     "benefits": {
-      "heading": "Waarom VITA Gebruiken",
+      "heading": "Waarom mensen voor VITA kiezen",
       "cards": [
-        { "title": "Donker Thema", "desc": "Een strak, modern donker design dat oogvermoeidheid vermindert en er prachtig uitziet. Elk scherm is ontworpen met een premium donkere esthetiek." },
-        { "title": "Makkelijk te Gebruiken", "desc": "Intuïtief ontwerp dat niet in de weg zit. Begin binnen seconden met het bijhouden van je workouts — geen leercurve, geen ingewikkelde setup." },
-        { "title": "Volg Alles", "desc": "Log elke set, herhaling en gewicht voor elke oefening. Volg je workout-aantal, volume, persoonlijke records en bekijk je voortgang in de tijd." }
+        {
+          "title": "Rustig design",
+          "desc": "Een strakke donkere interface die modern en prettig oogt, zodat jij je tijdens elke training beter kunt focussen."
+        },
+        {
+          "title": "Moeiteloos in gebruik",
+          "desc": "Eenvoudig vanaf het eerste moment. Geen steile leercurve en geen onnodige complexiteit — alleen een soepele ervaring die jouw routine ondersteunt."
+        },
+        {
+          "title": "Volg wat belangrijk is",
+          "desc": "Van sets en herhalingen tot volume en persoonlijke records: VITA geeft je een helder beeld van je voortgang in de tijd."
+        }
       ]
     },
     "pricing": {
-      "badge": "100% Gratis — Geen Addertjes",
-      "heading1": "Alles Wat Je Nodig Hebt,",
-      "heading2": "Helemaal Gratis",
-      "subtitle": "Geen abonnementen. Geen betaalmuren. Geen premium niveaus. Elke functie, elk hulpmiddel, elk inzicht — van dag één, voor altijd van jou.",
-      "features": ["Volledige Workout Bibliotheek", "Geavanceerde Analyses", "AI-Gestuurde Benchpress"]
+      "badge": "Volledig gratis",
+      "heading1": "Alles wat je nodig hebt,",
+      "heading2": "vanaf dag één inbegrepen",
+      "subtitle": "Geen abonnementen, geen verborgen upgrades en geen afgesloten functies. Gewoon een complete fitnesservaring die je vanaf het begin ondersteunt.",
+      "features": [
+        "Volledige workoutbibliotheek",
+        "Geavanceerde voortgangsinzichten",
+        "AI-ondersteuning voor bench press"
+      ]
     },
     "cta": {
       "heading1": "Download VITA &",
-      "heading2": "Bereik Je Doelen",
+      "heading2": "werk met vertrouwen aan je doelen",
       "qrLabel": "QR CODE",
       "appStoreAlt": "Download in de App Store"
     },
     "testimonials": {
-      "heading": "Echte Atleten. Echte Resultaten.",
+      "heading": "Echte mensen. Echte vooruitgang.",
       "items": [
-        { "name": "Sarah K.", "role": "Marathonloper", "quote": "VITA heeft mijn trainingsschema compleet veranderd. De analyses alleen al zijn het waard." },
-        { "name": "James R.", "role": "CrossFit Coach", "quote": "Ik raad VITA aan bij al mijn klanten. De maaltijdplanning-integratie is naadloos." },
-        { "name": "Maria L.", "role": "Yoga Instructeur", "quote": "Eindelijk een app die holistische fitness begrijpt. De slaaptracking is ongelooflijk nauwkeurig." },
-        { "name": "David C.", "role": "Triatleet", "quote": "De wearable-synchronisatie is vlekkeloos. Ik volg elke zwem-, fiets- en hardloopsessie zonder moeite." },
-        { "name": "Elena P.", "role": "Personal Trainer", "quote": "Mijn klanten zijn dol op de voortgangsrapporten. VITA laat me eruitzien als een datawetenschapper." },
-        { "name": "Tom W.", "role": "Weekendatleet", "quote": "Zelfs als recreatieve sporter houdt VITA me verantwoordelijk. Beste fitnessinvestering ooit." }
+        {
+          "name": "Sarah K.",
+          "role": "Marathonloper",
+          "quote": "VITA heeft rust en overzicht gebracht in mijn training. Ik zie mijn voortgang duidelijker en blijf makkelijker consistent."
+        },
+        {
+          "name": "James R.",
+          "role": "CrossFit Coach",
+          "quote": "Het is een van de weinige fitnessapps die krachtig aanvoelt en tegelijk heel toegankelijk is. Ik raad het met vertrouwen aan mijn klanten aan."
+        },
+        {
+          "name": "Maria L.",
+          "role": "Yoga-instructeur",
+          "quote": "VITA voelt doordacht en in balans. Het ondersteunt mijn welzijnsroutine op een manier die heel natuurlijk aanvoelt."
+        },
+        {
+          "name": "David C.",
+          "role": "Triatleet",
+          "quote": "Mijn trainingen bijhouden gaat moeiteloos. Alles wat ik nodig heb is aanwezig, zonder afleiding of overbodige drukte."
+        },
+        {
+          "name": "Elena P.",
+          "role": "Personal trainer",
+          "quote": "De voortgangsoverzichten zijn helder, waardevol en makkelijk te delen. Mijn klanten raken extra gemotiveerd wanneer ze echt kunnen zien hoeveel vooruitgang ze boeken."
+        },
+        {
+          "name": "Tom W.",
+          "role": "Recreatieve sporter",
+          "quote": "VITA helpt me om op koers te blijven zonder dat fitness ingewikkeld aanvoelt. Het past gewoon natuurlijk in mijn week."
+        }
       ]
     },
     "footer": {
       "brand": "VITA.",
-      "tagline": "Het precisie fitnessplatform voor de moderne atleet. Gebouwd voor prestaties, ontworpen voor helderheid.",
+      "tagline": "Een rustig en modern fitnessplatform dat je helpt te trainen met helderheid, consistentie en vertrouwen.",
       "productHeading": "Product",
       "productLinks": ["Functies", "Integraties", "Prijzen", "Wijzigingslog"],
       "connectHeading": "Verbinden",
-      "newsletterHeading": "Blijf Op de Hoogte",
+      "newsletterHeading": "Blijf op de hoogte",
       "emailPlaceholder": "E-mailadres",
       "copyright": "© 2024 VITA Labs Inc. Alle rechten voorbehouden."
     }
