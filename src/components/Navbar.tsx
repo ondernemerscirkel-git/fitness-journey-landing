@@ -7,8 +7,15 @@ import { useTranslations, useLocale } from "@/i18n/useTranslations";
 
 const Navbar = () => {
   const t = useTranslations();
+  const locale = useLocale();
+  const navigate = useNavigate();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const toggleLanguage = () => {
+    const hash = window.location.hash;
+    navigate(locale === "en" ? `/nl${hash}` : `/${hash}`);
+  };
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 100);
