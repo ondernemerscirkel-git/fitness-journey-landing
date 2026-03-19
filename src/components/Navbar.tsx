@@ -9,32 +9,40 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 180);
+    const handleScroll = () => setScrolled(window.scrollY > 100);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <motion.nav
-      className="fixed top-0 w-full z-50 transition-colors duration-300"
+      className="fixed top-0 w-full z-50"
       animate={{
         backgroundColor: scrolled ? "hsla(228, 33%, 97%, 0.8)" : "transparent",
         backdropFilter: scrolled ? "blur(16px)" : "blur(0px)",
         borderBottomWidth: scrolled ? 1 : 0,
       }}
-      transition={{ duration: 0.3 }}
+      transition={{ duration: 0.35 }}
       style={{ borderColor: "hsl(var(--border))" }}
     >
       <motion.div
         className="max-w-7xl mx-auto px-6 flex items-center justify-between"
         animate={{ height: scrolled ? 60 : 104 }}
-        transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
       >
-        <div className="text-2xl font-display font-bold tracking-tighter text-foreground">
+        <motion.div
+          className="font-display font-bold tracking-tighter text-foreground"
+          animate={{ fontSize: scrolled ? "1.25rem" : "1.75rem" }}
+          transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+        >
           VITA.
-        </div>
+        </motion.div>
 
-        <div className="hidden md:flex items-center gap-10 text-sm font-medium text-muted-foreground">
+        <motion.div
+          className="hidden md:flex items-center gap-10 font-medium text-muted-foreground"
+          animate={{ fontSize: scrolled ? "0.875rem" : "1rem" }}
+          transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+        >
           {navLinks.map((item) => (
             <a
               key={item}
@@ -44,11 +52,19 @@ const Navbar = () => {
               {item}
             </a>
           ))}
-        </div>
+        </motion.div>
 
         <motion.button
           whileTap={{ scale: 0.95 }}
-          className="hidden md:block bg-foreground text-background px-8 py-3.5 rounded-full text-base font-semibold hover:opacity-90 transition-opacity"
+          className="hidden md:block bg-foreground text-background rounded-full font-semibold hover:opacity-90 transition-opacity"
+          animate={{
+            paddingLeft: scrolled ? "1.5rem" : "2rem",
+            paddingRight: scrolled ? "1.5rem" : "2rem",
+            paddingTop: scrolled ? "0.625rem" : "0.875rem",
+            paddingBottom: scrolled ? "0.625rem" : "0.875rem",
+            fontSize: scrolled ? "0.875rem" : "1rem",
+          }}
+          transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
         >
           Download App
         </motion.button>
