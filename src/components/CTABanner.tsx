@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Apple, Play } from "lucide-react";
+import appStoreBadge from "@/assets/app-store-badge.png";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -32,20 +32,13 @@ const CTABanner = () => (
               </span>
             </div>
           </div>
-          <div className="flex flex-col gap-4">
-            <motion.button
-              whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-2 bg-background text-foreground px-8 py-4 rounded-2xl font-display font-bold hover:shadow-elevated transition-shadow"
-            >
-              <Apple size={20} /> App Store
-            </motion.button>
-            <motion.button
-              whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-2 bg-background text-foreground px-8 py-4 rounded-2xl font-display font-bold hover:shadow-elevated transition-shadow"
-            >
-              <Play size={20} /> Google Play
-            </motion.button>
-          </div>
+          <a href="#" className="inline-block">
+            <img
+              src={appStoreBadge}
+              alt="Download on the App Store"
+              className="h-14 w-auto"
+            />
+          </a>
         </div>
       </div>
     </motion.div>

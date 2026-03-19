@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { Apple, Play } from "lucide-react";
 import heroDesktop from "@/assets/hero-desktop.png";
+import appStoreBadge from "@/assets/app-store-badge.png";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 const fadeIn = {
@@ -34,20 +34,15 @@ const Hero = () => (
       <motion.div
         {...fadeIn}
         transition={{ delay: 0.2, duration: 0.7, ease }}
-        className="flex flex-col sm:flex-row justify-center gap-4 mb-16"
+        className="flex justify-center mb-16"
       >
-        <motion.button
-          whileTap={{ scale: 0.95 }}
-          className="flex items-center justify-center gap-2 bg-foreground text-background px-8 py-4 rounded-2xl font-display font-bold hover:shadow-elevated transition-shadow"
-        >
-          <Apple size={20} /> App Store
-        </motion.button>
-        <motion.button
-          whileTap={{ scale: 0.95 }}
-          className="flex items-center justify-center gap-2 bg-foreground text-background px-8 py-4 rounded-2xl font-display font-bold hover:shadow-elevated transition-shadow"
-        >
-          <Play size={20} /> Google Play
-        </motion.button>
+        <a href="#" className="inline-block">
+          <img
+            src={appStoreBadge}
+            alt="Download on the App Store"
+            className="h-14 w-auto"
+          />
+        </a>
       </motion.div>
 
       {/* Hero Image */}
