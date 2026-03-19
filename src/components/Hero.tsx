@@ -33,7 +33,7 @@ const Hero = () => {
       <img
         src={vellicLogoBg}
         alt=""
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[45%] w-[500px] md:w-[700px] lg:w-[800px] opacity-[0.04] pointer-events-none select-none"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[45%] w-[500px] md:w-[700px] lg:w-[800px] opacity-[0.025] pointer-events-none select-none"
       />
 
       <div className="max-w-7xl mx-auto text-center relative z-10">
