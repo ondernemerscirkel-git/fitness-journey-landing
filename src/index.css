@@ -108,59 +108,12 @@
   }
 }
 
-@keyframes blob-btn-1 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(8px, -4px) scale(1.05); }
-  66% { transform: translate(-4px, 6px) scale(0.95); }
-}
-
-@keyframes blob-btn-2 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(-6px, 4px) scale(1.08); }
-  66% { transform: translate(6px, -6px) scale(0.92); }
-}
-
 .btn-gradient-animate {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(135deg, hsl(var(--vita-periwinkle)), hsl(var(--primary) / 0.35));
-  transition: all 0.3s ease;
-}
-
-.btn-gradient-animate::before,
-.btn-gradient-animate::after {
-  content: '';
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-  filter: blur(10px);
-}
-
-.btn-gradient-animate::before {
-  width: 60%;
-  height: 140%;
-  top: -20%;
-  left: -10%;
-  background: hsl(var(--primary) / 0.35);
-  animation: blob-btn-1 6s ease-in-out infinite;
-}
-
-.btn-gradient-animate::after {
-  width: 50%;
-  height: 120%;
-  bottom: -10%;
-  right: -5%;
-  background: hsl(var(--vita-periwinkle) / 0.4);
-  animation: blob-btn-2 8s ease-in-out infinite;
+  background: hsl(var(--primary) / 0.15);
+  color: hsl(var(--primary));
+  transition: background 0.2s ease;
 }
 
 .btn-gradient-animate:hover {
-  background: hsl(var(--primary) / 0.15);
-  color: hsl(var(--primary));
-}
-
-.btn-gradient-animate:hover::before,
-.btn-gradient-animate:hover::after {
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  background: hsl(var(--primary) / 0.25);
 }
