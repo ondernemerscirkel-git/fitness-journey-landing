@@ -9,7 +9,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 60);
+    const handleScroll = () => setScrolled(window.scrollY > 180);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -27,7 +27,7 @@ const Navbar = () => {
     >
       <motion.div
         className="max-w-7xl mx-auto px-6 flex items-center justify-between"
-        animate={{ height: scrolled ? 64 : 88 }}
+        animate={{ height: scrolled ? 60 : 104 }}
         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
       >
         <div className="text-2xl font-display font-bold tracking-tighter text-foreground">
