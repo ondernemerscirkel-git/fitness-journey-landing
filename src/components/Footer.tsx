@@ -6,7 +6,7 @@ const Footer = () => {
   const t = useTranslations();
 
   return (
-    <footer className="bg-foreground text-background py-20 px-6 relative overflow-hidden">
+    <footer className="bg-foreground text-background pt-20 pb-6 px-6 relative overflow-hidden">
       {/* Blobs */}
       <div
         className="absolute top-[-15%] left-[-8%] w-72 h-72 rounded-full opacity-[0.08] blur-3xl pointer-events-none animate-float"
@@ -50,7 +50,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <p className="mt-12 text-center text-[11px] text-background/20 font-body tracking-wide pb-4">
+        <p className="mt-10 text-center text-[11px] text-primary/50 font-body tracking-wide">
           © {new Date().getFullYear()} Vellic Labs Inc.
         </p>
       </div>
