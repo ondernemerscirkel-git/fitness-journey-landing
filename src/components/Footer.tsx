@@ -1,5 +1,6 @@
 import { Instagram, Twitter, Linkedin } from "lucide-react";
-import { useTranslations } from "@/i18n/useTranslations";
+import { Link } from "react-router-dom";
+import { useTranslations, useLocale } from "@/i18n/useTranslations";
 import vellicLogoBg from "@/assets/vellic-logo-bg.png";
 
 const Footer = () => {
