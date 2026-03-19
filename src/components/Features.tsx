@@ -144,23 +144,25 @@ const Features = () => {
             {...fadeIn}
             className="bg-card rounded-[32px] p-8 flex flex-col items-center overflow-hidden min-h-[500px]"
           >
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={active}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.8, ease: "easeInOut" }}
-                className="text-center"
-              >
-                <h3 className="text-2xl font-display font-bold mb-2 text-foreground">
-                  {mockups[active].title}
-                </h3>
-                <p className="text-muted-foreground font-body text-sm">
-                  {mockups[active].desc}
-                </p>
-              </motion.div>
-            </AnimatePresence>
+            <div className="relative h-14">
+              <AnimatePresence initial={false}>
+                <motion.div
+                  key={active}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.8, ease: "easeInOut" }}
+                  className="absolute inset-0 text-center"
+                >
+                  <h3 className="text-2xl font-display font-bold mb-2 text-foreground">
+                    {mockups[active].title}
+                  </h3>
+                  <p className="text-muted-foreground font-body text-sm">
+                    {mockups[active].desc}
+                  </p>
+                </motion.div>
+              </AnimatePresence>
+            </div>
 
             <div className="relative w-56 sm:w-64 flex-1 mt-6">
               <AnimatePresence initial={false}>
