@@ -164,7 +164,7 @@ const Navbar = () => {
               {navLinks.map((item) => (
                 <motion.a
                   key={item}
-                  href={`#${item.toLowerCase()}`}
+                  href={`${locale === "nl" ? "/nl" : "/"}#${item.toLowerCase()}`}
                   variants={itemVariant}
                   className="text-foreground font-display font-bold text-4xl py-3 hover:text-primary transition-colors duration-200"
                   onClick={() => setMobileOpen(false)}
