@@ -81,21 +81,40 @@ const Navbar = () => {
             ))}
           </motion.div>
 
-          <motion.button
-            whileTap={{ scale: 0.95 }}
-            className="hidden md:block rounded-full font-semibold text-foreground hover:opacity-90 transition-opacity"
-            style={{ background: "linear-gradient(135deg, hsl(var(--vita-periwinkle)), hsl(var(--primary) / 0.35))" }}
-            animate={{
-              paddingLeft: scrolled ? "1.5rem" : "2rem",
-              paddingRight: scrolled ? "1.5rem" : "2rem",
-              paddingTop: scrolled ? "0.625rem" : "0.875rem",
-              paddingBottom: scrolled ? "0.625rem" : "0.875rem",
-              fontSize: scrolled ? "0.875rem" : "1rem",
-            }}
-            transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-          >
-            {t.nav.downloadApp}
-          </motion.button>
+          <div className="hidden md:flex items-center gap-3">
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              onClick={toggleLanguage}
+              className="rounded-full font-semibold text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5 border border-border"
+              animate={{
+                paddingLeft: scrolled ? "0.75rem" : "1rem",
+                paddingRight: scrolled ? "0.75rem" : "1rem",
+                paddingTop: scrolled ? "0.5rem" : "0.625rem",
+                paddingBottom: scrolled ? "0.5rem" : "0.625rem",
+                fontSize: scrolled ? "0.8rem" : "0.875rem",
+              }}
+              transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+            >
+              <Globe size={16} />
+              {locale === "en" ? "NL" : "EN"}
+            </motion.button>
+
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              className="rounded-full font-semibold text-foreground hover:opacity-90 transition-opacity"
+              style={{ background: "linear-gradient(135deg, hsl(var(--vita-periwinkle)), hsl(var(--primary) / 0.35))" }}
+              animate={{
+                paddingLeft: scrolled ? "1.5rem" : "2rem",
+                paddingRight: scrolled ? "1.5rem" : "2rem",
+                paddingTop: scrolled ? "0.625rem" : "0.875rem",
+                paddingBottom: scrolled ? "0.625rem" : "0.875rem",
+                fontSize: scrolled ? "0.875rem" : "1rem",
+              }}
+              transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+            >
+              {t.nav.downloadApp}
+            </motion.button>
+          </div>
 
           <button
             className="md:hidden text-foreground relative z-[60]"
