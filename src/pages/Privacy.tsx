@@ -16,15 +16,15 @@ const Privacy = () => {
   const locale = useLocale();
   const seo = {
     en: {
-      title: "Privacy Policy | Vellic",
+      title: "Privacy Policy | Leanify",
       description:
-        "Read how Vellic collects, uses, protects, and manages personal data across its fitness tracking platform.",
+        "Read how Leanify collects, uses, protects, and manages personal data across its fitness tracking platform.",
       path: "/privacy",
     },
     nl: {
-      title: "Privacybeleid | Vellic",
+      title: "Privacybeleid | Leanify",
       description:
-        "Lees hoe Vellic persoonsgegevens verzamelt, gebruikt, beschermt en beheert binnen het fitnessplatform.",
+        "Lees hoe Leanify persoonsgegevens verzamelt, gebruikt, beschermt en beheert binnen het fitnessplatform.",
       path: "/nl/privacy",
     },
   } as const;
@@ -38,7 +38,7 @@ const Privacy = () => {
         path={currentSeo.path}
         locale={locale}
         type="article"
-        keywords={["Vellic", "privacy policy", "fitness app privacy", "data protection"]}
+        keywords={["Leanify", "privacy policy", "fitness app privacy", "data protection"]}
         alternateLanguages={{ en: "/privacy", nl: "/nl/privacy" }}
         structuredData={{
           "@context": "https://schema.org",

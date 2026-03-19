@@ -13,7 +13,7 @@ const NotFound = () => {
   return (
     <div className="flex min-h-screen items-center justify-center bg-muted">
       <SEO
-        title="Page Not Found | Vellic"
+        title="Page Not Found | Leanify"
         description="The page you requested could not be found."
         path={location.pathname}
         locale={locale}

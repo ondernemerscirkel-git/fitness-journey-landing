@@ -19,8 +19,8 @@ type SEOProps = {
 };
 
 const MANAGED_ATTR = "data-seo-managed";
-const DEFAULT_SITE_NAME = "Vellic";
-const DEFAULT_AUTHOR = "Vellic";
+const DEFAULT_SITE_NAME = "Leanify";
+const DEFAULT_AUTHOR = "Leanify";
 const DEFAULT_IMAGE = "/og-image.png";
 const DEFAULT_THEME_COLOR = "#f4f6fb";
 

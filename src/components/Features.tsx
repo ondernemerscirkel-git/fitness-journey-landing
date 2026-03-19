@@ -47,6 +47,15 @@ const Features = () => {
   const [active, setActive] = useState(0);
   const mockups = t.features.mockups;
 
+  const handleDragEnd = (e: any, { offset, velocity }: any) => {
+    const swipePower = Math.abs(offset.x) * velocity.x;
+    if (swipePower < -100 || offset.x < -40) {
+      setActive((prev) => (prev + 1) % mockups.length);
+    } else if (swipePower > 100 || offset.x > 40) {
+      setActive((prev) => (prev - 1 + mockups.length) % mockups.length);
+    }
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       setActive((prev) => (prev + 1) % mockups.length);
@@ -75,7 +84,11 @@ const Features = () => {
 
           <motion.div
             {...fadeIn}
-            className="col-span-6 bg-card rounded-[32px] p-12 flex flex-col items-center overflow-hidden min-h-[600px]"
+            className="col-span-6 bg-card rounded-[32px] p-12 flex flex-col items-center overflow-hidden min-h-[600px] cursor-grab active:cursor-grabbing"
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={0.1}
+            onDragEnd={handleDragEnd}
           >
             <div className="relative w-full h-20">
               <AnimatePresence initial={false}>
@@ -117,9 +130,8 @@ const Features = () => {
                 <button
                   key={i}
                   onClick={() => setActive(i)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    i === active ? "bg-primary w-6" : "bg-muted-foreground/30"
-                  }`}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${i === active ? "bg-primary w-6" : "bg-muted-foreground/30"
+                    }`}
                 />
               ))}
             </div>
@@ -142,7 +154,11 @@ const Features = () => {
 
           <motion.div
             {...fadeIn}
-            className="bg-card rounded-[32px] p-8 flex flex-col items-center overflow-hidden min-h-[500px]"
+            className="bg-card rounded-[32px] p-8 flex flex-col items-center overflow-hidden min-h-[500px] cursor-grab active:cursor-grabbing"
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={0.1}
+            onDragEnd={handleDragEnd}
           >
             <div className="relative w-full h-20">
               <AnimatePresence initial={false}>
@@ -184,9 +200,8 @@ const Features = () => {
                 <button
                   key={i}
                   onClick={() => setActive(i)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    i === active ? "bg-primary w-6" : "bg-muted-foreground/30"
-                  }`}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${i === active ? "bg-primary w-6" : "bg-muted-foreground/30"
+                    }`}
                 />
               ))}
             </div>

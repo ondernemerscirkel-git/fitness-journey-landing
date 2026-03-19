@@ -17,18 +17,18 @@ const Index = () => {
 
   const seo = {
     en: {
-      title: "Vellic | Fitness Tracking, Guided Workouts, and Progress Insights",
+      title: "Leanify | Fitness Tracking, Guided Workouts, and Progress Insights",
       description:
-        "Track workouts, follow guided bench press programs, and build better routines with Vellic's clear analytics, smart reminders, and calm fitness experience.",
+        "Track workouts, follow guided bench press programs, and build better routines with Leanify's clear analytics, smart reminders, and calm fitness experience.",
       path: "/",
-      imageAlt: "Vellic fitness app hero preview showing workout tracking and progress insights",
+      imageAlt: "Leanify fitness app hero preview showing workout tracking and progress insights",
     },
     nl: {
-      title: "Vellic | Fitnessregistratie, begeleide workouts en voortgangsinzichten",
+      title: "Leanify | Fitnessregistratie, begeleide workouts en voortgangsinzichten",
       description:
-        "Houd workouts bij, volg begeleide bench press-programma's en bouw betere routines op met Vellics heldere inzichten, slimme herinneringen en rustige fitnesservaring.",
+        "Houd workouts bij, volg begeleide bench press-programma's en bouw betere routines op met Leanify's heldere inzichten, slimme herinneringen en rustige fitnesservaring.",
       path: "/nl",
-      imageAlt: "Vellic fitness app preview met workoutregistratie en voortgangsinzichten",
+      imageAlt: "Leanify fitness app preview met workoutregistratie en voortgangsinzichten",
     },
   } as const;
 
@@ -42,13 +42,13 @@ const Index = () => {
     "@graph": [
       {
         "@type": "Organization",
-        name: "Vellic",
+        name: "Leanify",
         url: currentSeo.path,
         logo: "/favicon.ico",
       },
       {
         "@type": "SoftwareApplication",
-        name: "Vellic",
+        name: "Leanify",
         applicationCategory: "HealthApplication",
         operatingSystem: "iOS",
         description: currentSeo.description,
@@ -56,7 +56,7 @@ const Index = () => {
       },
       {
         "@type": "WebSite",
-        name: "Vellic",
+        name: "Leanify",
         url: currentSeo.path,
         inLanguage: locale,
       },
@@ -81,7 +81,7 @@ const Index = () => {
         locale={locale}
         imageAlt={currentSeo.imageAlt}
         keywords={[
-          "Vellic",
+          "Leanify",
           "fitness app",
           "workout tracker",
           "progress insights",
