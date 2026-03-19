@@ -16,15 +16,15 @@ const Privacy = () => {
   const locale = useLocale();
   const seo = {
     en: {
-      title: "Privacy Policy | Leanify",
+      title: "Privacy Policy | Vellic",
       description:
-        "Read how Leanify collects, uses, protects, and manages personal data across its fitness tracking platform.",
+        "Read how Vellic collects, uses, protects, and manages personal data across its fitness tracking platform.",
       path: "/privacy",
     },
     nl: {
-      title: "Privacybeleid | Leanify",
+      title: "Privacybeleid | Vellic",
       description:
-        "Lees hoe Leanify persoonsgegevens verzamelt, gebruikt, beschermt en beheert binnen het fitnessplatform.",
+        "Lees hoe Vellic persoonsgegevens verzamelt, gebruikt, beschermt en beheert binnen het fitnessplatform.",
       path: "/nl/privacy",
     },
   } as const;
@@ -38,7 +38,7 @@ const Privacy = () => {
         path={currentSeo.path}
         locale={locale}
         type="article"
-        keywords={["Leanify", "privacy policy", "fitness app privacy", "data protection"]}
+        keywords={["Vellic", "privacy policy", "fitness app privacy", "data protection"]}
         alternateLanguages={{ en: "/privacy", nl: "/nl/privacy" }}
         structuredData={{
           "@context": "https://schema.org",
@@ -84,7 +84,7 @@ const Privacy = () => {
             <div>
               <h2 className="text-lg font-display font-semibold text-foreground mb-3">1. Information We Collect</h2>
               <p>
-                We collect information you provide directly, such as your name, email address, and fitness data when you create an account and use Vellic. We also automatically collect usage data including device information, app interactions, and performance metrics to improve our services.
+                We collect information you provide directly, such as your name, email address, and fitness data when you create an account and use Leanify. We also automatically collect usage data including device information, app interactions, and performance metrics to improve our services.
               </p>
             </div>
 
@@ -128,14 +128,14 @@ const Privacy = () => {
             <div>
               <h2 className="text-lg font-display font-semibold text-foreground mb-3">6. Cookies & Tracking</h2>
               <p>
-                We use essential cookies to ensure the proper functioning of our app. Analytics cookies are used only with your consent to help us understand how you interact with Vellic so we can continuously improve the experience.
+                We use essential cookies to ensure the proper functioning of our app. Analytics cookies are used only with your consent to help us understand how you interact with Leanify so we can continuously improve the experience.
               </p>
             </div>
 
             <div>
               <h2 className="text-lg font-display font-semibold text-foreground mb-3">7. Children's Privacy</h2>
               <p>
-                Vellic is not intended for users under the age of 16. We do not knowingly collect personal information from children. If we learn that we have collected data from a child, we will take steps to delete it promptly.
+                Leanify is not intended for users under the age of 16. We do not knowingly collect personal information from children. If we learn that we have collected data from a child, we will take steps to delete it promptly.
               </p>
             </div>
 

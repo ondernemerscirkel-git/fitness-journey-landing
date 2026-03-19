@@ -73,33 +73,33 @@ const Index = () => {
   }, [hash]);
 
   return (
-  <div className="bg-background text-foreground selection:bg-primary selection:text-primary-foreground">
-    <SEO
-      title={currentSeo.title}
-      description={currentSeo.description}
-      path={currentSeo.path}
-      locale={locale}
-      imageAlt={currentSeo.imageAlt}
-      keywords={[
-        "Vellic",
-        "fitness app",
-        "workout tracker",
-        "progress insights",
-        "bench press program",
-        "training log",
-      ]}
-      alternateLanguages={alternateLanguages}
-      structuredData={structuredData}
-    />
-    <Navbar />
-    <Hero />
-    <Features />
-    <Benefits />
-    <Pricing />
-    <CTABanner />
-    <Testimonials />
-    <Footer />
-  </div>
+    <div className="bg-background text-foreground selection:bg-primary selection:text-primary-foreground">
+      <SEO
+        title={currentSeo.title}
+        description={currentSeo.description}
+        path={currentSeo.path}
+        locale={locale}
+        imageAlt={currentSeo.imageAlt}
+        keywords={[
+          "Vellic",
+          "fitness app",
+          "workout tracker",
+          "progress insights",
+          "bench press program",
+          "training log",
+        ]}
+        alternateLanguages={alternateLanguages}
+        structuredData={structuredData}
+      />
+      <Navbar />
+      <Hero />
+      <Features />
+      <Benefits />
+      <Pricing />
+      <CTABanner />
+      <Testimonials />
+      <Footer />
+    </div>
   );
 };
 
