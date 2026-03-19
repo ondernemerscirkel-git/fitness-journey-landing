@@ -20,6 +20,13 @@ const Navbar = () => {
   };
 
   useEffect(() => {
+    if (!langOpen) return;
+    const close = () => setLangOpen(false);
+    document.addEventListener("click", close);
+    return () => document.removeEventListener("click", close);
+  }, [langOpen]);
+
+  useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 100);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
