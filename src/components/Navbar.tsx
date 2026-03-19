@@ -81,7 +81,7 @@ const Navbar = () => {
           </a>
 
           <motion.div
-            className="hidden md:flex items-center gap-10 font-medium text-muted-foreground"
+            className="hidden lg:flex items-center gap-10 font-medium text-muted-foreground"
             animate={{ fontSize: scrolled ? "0.875rem" : "1rem" }}
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
           >
