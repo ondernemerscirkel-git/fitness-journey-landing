@@ -14,6 +14,8 @@ const fadeIn = {
 
 const Hero = () => {
   const t = useTranslations();
+  const locale = useLocale();
+  const imgs = screenshots[locale];
 
   return (
     <section id="home" className="pt-40 pb-0 px-6 overflow-hidden relative">
