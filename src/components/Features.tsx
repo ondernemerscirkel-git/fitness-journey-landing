@@ -30,7 +30,7 @@ const FeatureCard = ({ icon, title, desc }: FeatureCardProps) => (
 );
 
 const Features = () => (
-  <section id="features" className="py-32 px-6 bg-background">
+  <section id="features" className="py-32 px-6 bg-card">
     <div className="max-w-7xl mx-auto">
       <motion.div {...fadeIn} className="text-center mb-20">
         <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground">
