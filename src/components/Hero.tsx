@@ -30,6 +30,11 @@ const Hero = () => {
         className="absolute top-[18%] left-[4%] w-48 h-48 md:w-64 md:h-64 rounded-full opacity-40 blur-2xl pointer-events-none animate-float-slow"
         style={{ background: "radial-gradient(circle, hsl(var(--primary) / 0.35), hsl(var(--vita-periwinkle) / 0.2))" }}
       />
+      <img
+        src={vellicLogoBg}
+        alt=""
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[45%] w-[500px] md:w-[700px] lg:w-[800px] opacity-[0.04] pointer-events-none select-none"
+      />
 
       <div className="max-w-7xl mx-auto text-center relative z-10">
         <motion.h1
