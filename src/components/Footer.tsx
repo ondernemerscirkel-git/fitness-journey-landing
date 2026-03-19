@@ -6,7 +6,7 @@ const Footer = () => {
   const t = useTranslations();
 
   return (
-    <footer className="bg-foreground text-background py-20 px-6 relative overflow-hidden">
+    <footer className="bg-foreground text-background pt-20 pb-6 px-6 relative overflow-hidden">
       {/* Blobs */}
       <div
         className="absolute top-[-15%] left-[-8%] w-72 h-72 rounded-full opacity-[0.08] blur-3xl pointer-events-none animate-float"
