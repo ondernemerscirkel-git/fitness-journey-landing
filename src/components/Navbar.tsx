@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X, Globe, ChevronRight } from "lucide-react";
 import appStoreBadge from "@/assets/app-store-badge.png";
 import { useTranslations, useLocale } from "@/i18n/useTranslations";
 
@@ -143,10 +143,10 @@ const Navbar = () => {
 
             <motion.button
               whileTap={{ scale: 0.95 }}
-              className="rounded-full font-semibold text-foreground btn-gradient-animate"
+              className="rounded-full font-semibold text-foreground btn-gradient-animate flex items-center gap-1.5"
               animate={{
                 paddingLeft: scrolled ? "1.5rem" : "2rem",
-                paddingRight: scrolled ? "1.5rem" : "2rem",
+                paddingRight: scrolled ? "1.25rem" : "1.75rem",
                 paddingTop: scrolled ? "0.625rem" : "0.875rem",
                 paddingBottom: scrolled ? "0.625rem" : "0.875rem",
                 fontSize: scrolled ? "0.875rem" : "1rem",
@@ -154,6 +154,7 @@ const Navbar = () => {
               transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
             >
               {t.nav.downloadApp}
+              <ChevronRight size={16} />
             </motion.button>
           </div>
 
