@@ -158,22 +158,59 @@ const Navbar = () => {
             </motion.button>
           </div>
 
-          <button
-            className="lg:hidden text-foreground relative z-[60]"
-            onClick={() => setMobileOpen(!mobileOpen)}
-          >
-            <AnimatePresence mode="wait">
-              {mobileOpen ? (
-                <motion.div key="close" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }} transition={{ duration: 0.2 }}>
-                  <X size={24} />
-                </motion.div>
-              ) : (
-                <motion.div key="menu" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }} transition={{ duration: 0.2 }}>
-                  <Menu size={24} />
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </button>
+          <div className="lg:hidden flex items-center gap-3 relative z-[60]">
+            <div className="relative">
+              <button
+                onClick={(e) => { e.stopPropagation(); setLangOpen(!langOpen); }}
+                className="rounded-full font-semibold text-muted-foreground hover:text-primary hover:border-primary/30 transition-colors flex items-center gap-1.5 border border-border px-3 py-2 text-sm"
+              >
+                <Globe size={14} />
+                {locale === "en" ? "EN" : "NL"}
+              </button>
+
+              <AnimatePresence>
+                {langOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -4, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -4, scale: 0.95 }}
+                    transition={{ duration: 0.15 }}
+                    className="absolute top-full right-0 mt-2 bg-background border border-border rounded-xl shadow-elevated overflow-hidden min-w-[120px] z-50"
+                  >
+                    <button
+                      onClick={() => switchTo("en")}
+                      className={`w-full text-left px-4 py-2.5 text-sm font-body transition-colors ${locale === "en" ? "text-primary font-semibold bg-primary/5" : "text-muted-foreground hover:text-foreground hover:bg-muted"}`}
+                    >
+                      English
+                    </button>
+                    <button
+                      onClick={() => switchTo("nl")}
+                      className={`w-full text-left px-4 py-2.5 text-sm font-body transition-colors ${locale === "nl" ? "text-primary font-semibold bg-primary/5" : "text-muted-foreground hover:text-foreground hover:bg-muted"}`}
+                    >
+                      Nederlands
+                    </button>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="text-foreground"
+            >
+              <AnimatePresence mode="wait">
+                {mobileOpen ? (
+                  <motion.div key="close" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }} transition={{ duration: 0.2 }}>
+                    <X size={24} />
+                  </motion.div>
+                ) : (
+                  <motion.div key="menu" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }} transition={{ duration: 0.2 }}>
+                    <Menu size={24} />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </button>
+          </div>
         </motion.div>
       </motion.nav>
 
