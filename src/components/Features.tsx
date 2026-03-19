@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { Activity, Utensils, TrendingUp, Bell } from "lucide-react";
+import { Activity, Target, TrendingUp, Bell } from "lucide-react";
 import { useState, useEffect } from "react";
 import type { ReactNode } from "react";
 
@@ -35,7 +35,7 @@ const FeatureCard = ({ icon, title, desc }: FeatureCardProps) => (
 
 const cardIcons = [
   <Activity size={22} />,
-  <Utensils size={22} />,
+  <Target size={22} />,
   <TrendingUp size={22} />,
   <Bell size={22} />,
 ];
