@@ -39,6 +39,7 @@ const Navbar = () => {
   };
 
   const navLinks = t.nav.links;
+  const navTargets = ["home", "features", "pricing", "testimonials"];
 
   return (
     <>
