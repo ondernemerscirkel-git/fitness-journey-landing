@@ -10,6 +10,7 @@ const Navbar = () => {
   const locale = useLocale();
   const navigate = useNavigate();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   const toggleLanguage = () => {
