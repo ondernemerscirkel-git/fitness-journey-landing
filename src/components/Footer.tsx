@@ -5,6 +5,8 @@ import vellicLogoBg from "@/assets/vellic-logo-bg.png";
 
 const Footer = () => {
   const t = useTranslations();
+  const locale = useLocale();
+  const privacyPath = locale === "nl" ? "/nl/privacy" : "/privacy";
 
   return (
     <footer className="bg-foreground text-background pt-20 pb-6 px-6 relative overflow-hidden">
