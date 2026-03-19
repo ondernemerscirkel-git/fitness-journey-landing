@@ -101,7 +101,7 @@ const Navbar = () => {
               <motion.button
                 whileTap={{ scale: 0.95 }}
                 onClick={(e) => { e.stopPropagation(); setLangOpen(!langOpen); }}
-                className="rounded-full font-semibold text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5 border border-border"
+                className="rounded-full font-semibold text-muted-foreground hover:text-primary hover:border-primary/30 transition-colors flex items-center gap-1.5 border border-border"
                 animate={{
                   paddingLeft: scrolled ? "0.75rem" : "1rem",
                   paddingRight: scrolled ? "0.75rem" : "1rem",
