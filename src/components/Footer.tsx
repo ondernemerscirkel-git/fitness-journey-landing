@@ -1,61 +1,60 @@
 import { Instagram, Twitter, Linkedin } from "lucide-react";
 import { useTranslations } from "@/i18n/useTranslations";
+import vellicLogoBg from "@/assets/vellic-logo-bg.png";
 
 const Footer = () => {
   const t = useTranslations();
 
   return (
-    <footer className="bg-foreground text-background pt-24 pb-0 px-6">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-24 mb-20">
-        <div>
-          <div className="text-2xl font-display font-semibold tracking-tighter mb-6">
+    <footer className="bg-foreground text-background py-20 px-6 relative overflow-hidden">
+      {/* Blobs */}
+      <div
+        className="absolute top-[-15%] left-[-8%] w-72 h-72 rounded-full opacity-[0.08] blur-3xl pointer-events-none animate-float"
+        style={{ background: "radial-gradient(circle, hsl(var(--primary)), hsl(var(--vita-lavender-deep) / 0.4))" }}
+      />
+      <div
+        className="absolute bottom-[-10%] right-[-5%] w-64 h-64 rounded-full opacity-[0.06] blur-3xl pointer-events-none animate-float-delayed"
+        style={{ background: "radial-gradient(circle, hsl(var(--vita-periwinkle)), hsl(var(--primary) / 0.3))" }}
+      />
+
+      {/* Watermark */}
+      <img
+        src={vellicLogoBg}
+        alt=""
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] opacity-[0.025] pointer-events-none select-none"
+      />
+
+      {/* Content */}
+      <div className="max-w-5xl mx-auto relative z-10">
+        <div className="flex flex-col md:flex-row items-center md:justify-between gap-8 mb-12">
+          <div className="text-2xl font-display font-bold tracking-tighter">
             {t.footer.brand}
           </div>
-          <p className="text-background/40 text-sm leading-relaxed font-body">
-            {t.footer.tagline}
-          </p>
-        </div>
 
-        <div>
-          <h4 className="font-display font-semibold mb-6">{t.footer.productHeading}</h4>
-          <ul className="space-y-4 text-sm text-background/40 font-body">
+          <div className="flex items-center gap-6 text-background/30">
             {t.footer.productLinks.map((link) => (
-              <li
+              <a
                 key={link}
-                className="hover:text-primary cursor-pointer transition-colors duration-200"
+                href="#"
+                className="text-sm font-body hover:text-primary transition-colors duration-200"
               >
                 {link}
-              </li>
+              </a>
             ))}
-          </ul>
-        </div>
+          </div>
 
-        <div>
-          <h4 className="font-display font-semibold mb-6">{t.footer.connectHeading}</h4>
-          <div className="flex gap-5 text-background/40">
-            <Instagram
-              className="hover:text-primary cursor-pointer transition-colors duration-200"
-              size={20}
-              strokeWidth={1.5}
-            />
-            <Twitter
-              className="hover:text-primary cursor-pointer transition-colors duration-200"
-              size={20}
-              strokeWidth={1.5}
-            />
-            <Linkedin
-              className="hover:text-primary cursor-pointer transition-colors duration-200"
-              size={20}
-              strokeWidth={1.5}
-            />
+          <div className="flex items-center gap-4 text-background/30">
+            <Instagram className="hover:text-primary cursor-pointer transition-colors duration-200" size={18} strokeWidth={1.5} />
+            <Twitter className="hover:text-primary cursor-pointer transition-colors duration-200" size={18} strokeWidth={1.5} />
+            <Linkedin className="hover:text-primary cursor-pointer transition-colors duration-200" size={18} strokeWidth={1.5} />
           </div>
         </div>
-      </div>
 
-      <div className="max-w-7xl mx-auto border-t border-background/10">
-        <p className="py-8 text-center text-xs text-background/25 font-body">
-          © {new Date().getFullYear()} Vellic Labs Inc. All rights reserved.
-        </p>
+        <div className="border-t border-background/[0.06] pt-6 text-center">
+          <p className="text-[11px] text-background/20 font-body tracking-wide">
+            © {new Date().getFullYear()} Vellic Labs Inc.
+          </p>
+        </div>
       </div>
     </footer>
   );
