@@ -3,12 +3,8 @@ import { Activity, Utensils, TrendingUp, Bell } from "lucide-react";
 import { useState, useEffect } from "react";
 import type { ReactNode } from "react";
 
-import mockupGuided from "@/assets/mockup-guided.png";
-import mockupExercise from "@/assets/mockup-exercise.png";
-import mockupAnalytics from "@/assets/mockup-analytics.png";
-import mockupLogbook from "@/assets/mockup-logbook.png";
-import mockupWorkout from "@/assets/mockup-workout.png";
-import { useTranslations } from "@/i18n/useTranslations";
+import { useTranslations, useLocale } from "@/i18n/useTranslations";
+import { screenshots } from "@/assets/screenshots";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -37,7 +33,6 @@ const FeatureCard = ({ icon, title, desc }: FeatureCardProps) => (
   </motion.div>
 );
 
-const mockupImages = [mockupGuided, mockupExercise, mockupAnalytics, mockupLogbook, mockupWorkout];
 const cardIcons = [
   <Activity size={22} />,
   <Utensils size={22} />,
@@ -47,6 +42,8 @@ const cardIcons = [
 
 const Features = () => {
   const t = useTranslations();
+  const locale = useLocale();
+  const mockupImages = screenshots[locale].mockups;
   const [active, setActive] = useState(0);
   const mockups = t.features.mockups;
 

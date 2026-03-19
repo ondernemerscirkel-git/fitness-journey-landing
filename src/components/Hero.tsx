@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
-import heroDesktop from "@/assets/hero-desktop.png";
-import heroMobile from "@/assets/hero-mobile.png";
 import appStoreBadge from "@/assets/app-store-badge.png";
 import vellicLogoBg from "@/assets/vellic-logo-bg.png";
-import { useTranslations } from "@/i18n/useTranslations";
+import { useTranslations, useLocale } from "@/i18n/useTranslations";
+import { screenshots } from "@/assets/screenshots";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 const fadeIn = {
@@ -15,6 +14,8 @@ const fadeIn = {
 
 const Hero = () => {
   const t = useTranslations();
+  const locale = useLocale();
+  const imgs = screenshots[locale];
 
   return (
     <section id="home" className="pt-40 pb-0 px-6 overflow-hidden relative">
@@ -72,8 +73,8 @@ const Hero = () => {
           className="relative max-w-5xl mx-auto"
         >
           <picture>
-            <source media="(min-width: 768px)" srcSet={heroDesktop} />
-            <img src={heroMobile} alt={t.hero.imageAlt} className="w-full h-auto relative z-10" />
+            <source media="(min-width: 768px)" srcSet={imgs.heroDesktop} />
+            <img src={imgs.heroMobile} alt={t.hero.imageAlt} className="w-full h-auto relative z-10" />
           </picture>
         </motion.div>
       </div>
