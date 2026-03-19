@@ -8,6 +8,7 @@ import mockupExercise from "@/assets/mockup-exercise.png";
 import mockupAnalytics from "@/assets/mockup-analytics.png";
 import mockupLogbook from "@/assets/mockup-logbook.png";
 import mockupWorkout from "@/assets/mockup-workout.png";
+import { useTranslations } from "@/i18n/useTranslations";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -36,51 +37,44 @@ const FeatureCard = ({ icon, title, desc }: FeatureCardProps) => (
   </motion.div>
 );
 
-const mockups = [
-  { image: mockupGuided, title: "Guided Programs", desc: "Structured training cycles that adapt to your progress." },
-  { image: mockupExercise, title: "Exercise Library", desc: "Detailed guides for every movement in your routine." },
-  { image: mockupAnalytics, title: "Progress Analytics", desc: "Track your strength gains over time with clear charts." },
-  { image: mockupLogbook, title: "Training Logbook", desc: "Your complete workout history at a glance." },
-  { image: mockupWorkout, title: "Live Tracking", desc: "Log sets, reps, and rest in real time." },
+const mockupImages = [mockupGuided, mockupExercise, mockupAnalytics, mockupLogbook, mockupWorkout];
+const cardIcons = [
+  <Activity size={22} />,
+  <Utensils size={22} />,
+  <TrendingUp size={22} />,
+  <Bell size={22} />,
 ];
 
 const Features = () => {
+  const t = useTranslations();
   const [active, setActive] = useState(0);
+  const mockups = t.features.mockups;
 
   useEffect(() => {
     const interval = setInterval(() => {
       setActive((prev) => (prev + 1) % mockups.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [mockups.length]);
 
   return (
     <section id="features" className="py-32 px-6 bg-foreground">
       <div className="max-w-7xl mx-auto">
         <motion.div {...fadeIn} className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-background">
-            Everything You Need.
+            {t.features.heading1}
             <br />
-            Nothing You Don't.
+            {t.features.heading2}
           </h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-          {/* Left Stack */}
           <div className="md:col-span-3 flex flex-col gap-6">
-            <FeatureCard
-              icon={<Activity size={22} />}
-              title="Workout Tracking"
-              desc="Real-time biometric sync with wearable devices."
-            />
-            <FeatureCard
-              icon={<Utensils size={22} />}
-              title="Diet Plans"
-              desc="AI-driven nutritional guidance tailored to goals."
-            />
+            {t.features.cards.slice(0, 2).map((card, i) => (
+              <FeatureCard key={i} icon={cardIcons[i]} title={card.title} desc={card.desc} />
+            ))}
           </div>
 
-          {/* Center Tall — Rotating Mockups */}
           <motion.div
             {...fadeIn}
             className="md:col-span-6 bg-card rounded-[32px] p-8 md:p-12 flex flex-col items-center overflow-hidden min-h-[500px] md:min-h-[600px]"
@@ -107,7 +101,7 @@ const Features = () => {
               <AnimatePresence mode="wait">
                 <motion.img
                   key={active}
-                  src={mockups[active].image}
+                  src={mockupImages[active]}
                   alt={mockups[active].title}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -118,7 +112,6 @@ const Features = () => {
               </AnimatePresence>
             </div>
 
-            {/* Dots */}
             <div className="flex gap-2 mt-4">
               {mockups.map((_, i) => (
                 <button
@@ -132,18 +125,10 @@ const Features = () => {
             </div>
           </motion.div>
 
-          {/* Right Stack */}
           <div className="md:col-span-3 flex flex-col gap-6">
-            <FeatureCard
-              icon={<TrendingUp size={22} />}
-              title="Progress Analytics"
-              desc="Deep-dive into your weekly performance trends."
-            />
-            <FeatureCard
-              icon={<Bell size={22} />}
-              title="Smart Reminders"
-              desc="Context-aware alerts to keep you on schedule."
-            />
+            {t.features.cards.slice(2, 4).map((card, i) => (
+              <FeatureCard key={i} icon={cardIcons[i + 2]} title={card.title} desc={card.desc} />
+            ))}
           </div>
         </div>
       </div>

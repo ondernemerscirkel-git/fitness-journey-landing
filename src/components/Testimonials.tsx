@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
+import { useTranslations } from "@/i18n/useTranslations";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -7,15 +8,6 @@ const fadeIn = {
   viewport: { once: true },
   transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const },
 };
-
-const testimonials = [
-  { name: "Sarah K.", role: "Marathon Runner", quote: "VITA completely transformed my training regimen. The analytics alone are worth the subscription." },
-  { name: "James R.", role: "CrossFit Coach", quote: "I recommend VITA to all my clients. The meal planning integration is seamless." },
-  { name: "Maria L.", role: "Yoga Instructor", quote: "Finally, an app that understands holistic fitness. The sleep tracking is incredibly accurate." },
-  { name: "David C.", role: "Triathlete", quote: "The wearable sync feature is flawless. I track every swim, ride, and run without friction." },
-  { name: "Elena P.", role: "Personal Trainer", quote: "My clients love the progress reports. VITA makes me look like a data scientist." },
-  { name: "Tom W.", role: "Weekend Warrior", quote: "Even as a casual athlete, VITA keeps me accountable. Best fitness investment I've made." },
-];
 
 const initials = (name: string) => name.split(" ").map(n => n[0]).join("");
 
@@ -43,23 +35,27 @@ const TestimonialCard = ({ name, role, quote }: { name: string; role: string; qu
   </motion.div>
 );
 
-const Testimonials = () => (
-  <section id="testimonials" className="py-32 px-6 bg-background">
-    <div className="max-w-7xl mx-auto">
-      <motion.h2
-        {...fadeIn}
-        className="text-4xl md:text-5xl font-display font-bold text-center text-foreground mb-20"
-      >
-        Real Athletes. Real Results.
-      </motion.h2>
+const Testimonials = () => {
+  const t = useTranslations();
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {testimonials.map((t) => (
-          <TestimonialCard key={t.name} {...t} />
-        ))}
+  return (
+    <section id="testimonials" className="py-32 px-6 bg-background">
+      <div className="max-w-7xl mx-auto">
+        <motion.h2
+          {...fadeIn}
+          className="text-4xl md:text-5xl font-display font-bold text-center text-foreground mb-20"
+        >
+          {t.testimonials.heading}
+        </motion.h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {t.testimonials.items.map((item) => (
+            <TestimonialCard key={item.name} {...item} />
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default Testimonials;

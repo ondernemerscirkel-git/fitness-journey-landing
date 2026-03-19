@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Shield, Zap, Heart } from "lucide-react";
 import type { ReactNode } from "react";
+import { useTranslations } from "@/i18n/useTranslations";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -40,34 +41,28 @@ const BenefitCard = ({ icon, title, desc }: BenefitCardProps) => (
   </motion.div>
 );
 
-const Benefits = () => (
-  <section className="py-32 px-6 bg-background">
-    <div className="max-w-7xl mx-auto">
-      <motion.div {...fadeIn} className="text-center mb-20">
-        <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground">
-          Why Thousands Trust VITA
-        </h2>
-      </motion.div>
+const icons = [<Shield size={22} />, <Zap size={22} />, <Heart size={22} />];
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <BenefitCard
-          icon={<Shield size={22} />}
-          title="Privacy First"
-          desc="End-to-end encrypted health data with zero third-party sharing."
-        />
-        <BenefitCard
-          icon={<Zap size={22} />}
-          title="Instant Sync"
-          desc="Seamless integration with Apple Health, Google Fit, and 40+ wearables."
-        />
-        <BenefitCard
-          icon={<Heart size={22} />}
-          title="Holistic Health"
-          desc="Track sleep, stress, nutrition, and activity in one unified dashboard."
-        />
+const Benefits = () => {
+  const t = useTranslations();
+
+  return (
+    <section className="py-32 px-6 bg-background">
+      <div className="max-w-7xl mx-auto">
+        <motion.div {...fadeIn} className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground">
+            {t.benefits.heading}
+          </h2>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {t.benefits.cards.map((card, i) => (
+            <BenefitCard key={i} icon={icons[i]} title={card.title} desc={card.desc} />
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default Benefits;

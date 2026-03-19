@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import appStoreBadge from "@/assets/app-store-badge.png";
-
-const navLinks = ["Home", "Features", "Pricing", "Testimonials"];
+import { useTranslations } from "@/i18n/useTranslations";
 
 const Navbar = () => {
+  const t = useTranslations();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -15,7 +15,6 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Lock body scroll when menu is open
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
@@ -30,6 +29,8 @@ const Navbar = () => {
     animate: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] as const } },
     exit: { opacity: 0, y: 10, transition: { duration: 0.2 } },
   };
+
+  const navLinks = t.nav.links;
 
   return (
     <>
@@ -53,7 +54,7 @@ const Navbar = () => {
             animate={{ fontSize: scrolled ? "1.25rem" : "1.75rem" }}
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
           >
-            VITA.
+            {t.nav.brand}
           </motion.div>
 
           <motion.div
@@ -84,7 +85,7 @@ const Navbar = () => {
             }}
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
           >
-            Download App
+            {t.nav.downloadApp}
           </motion.button>
 
           <button
@@ -106,7 +107,6 @@ const Navbar = () => {
         </motion.div>
       </motion.nav>
 
-      {/* Full-screen mobile menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -116,27 +116,11 @@ const Navbar = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.35, ease: "easeInOut" }}
           >
-            {/* Background with glassmorphism blobs */}
-            <motion.div
-              className="absolute inset-0 bg-background"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-            />
-            <div
-              className="absolute top-16 right-[-4%] w-72 h-72 rounded-full opacity-60 blur-3xl pointer-events-none animate-float"
-              style={{ background: "radial-gradient(circle, hsl(var(--primary) / 0.45), hsl(var(--vita-lavender-deep) / 0.2))" }}
-            />
-            <div
-              className="absolute bottom-24 left-[-6%] w-64 h-64 rounded-full opacity-50 blur-3xl pointer-events-none animate-float-delayed"
-              style={{ background: "radial-gradient(circle, hsl(var(--vita-lavender-deep) / 0.4), hsl(var(--primary) / 0.15))" }}
-            />
-            <div
-              className="absolute top-[30%] left-[4%] w-48 h-48 rounded-full opacity-40 blur-2xl pointer-events-none animate-float-slow"
-              style={{ background: "radial-gradient(circle, hsl(var(--primary) / 0.35), hsl(var(--vita-periwinkle) / 0.2))" }}
-            />
+            <motion.div className="absolute inset-0 bg-background" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} />
+            <div className="absolute top-16 right-[-4%] w-72 h-72 rounded-full opacity-60 blur-3xl pointer-events-none animate-float" style={{ background: "radial-gradient(circle, hsl(var(--primary) / 0.45), hsl(var(--vita-lavender-deep) / 0.2))" }} />
+            <div className="absolute bottom-24 left-[-6%] w-64 h-64 rounded-full opacity-50 blur-3xl pointer-events-none animate-float-delayed" style={{ background: "radial-gradient(circle, hsl(var(--vita-lavender-deep) / 0.4), hsl(var(--primary) / 0.15))" }} />
+            <div className="absolute top-[30%] left-[4%] w-48 h-48 rounded-full opacity-40 blur-2xl pointer-events-none animate-float-slow" style={{ background: "radial-gradient(circle, hsl(var(--primary) / 0.35), hsl(var(--vita-periwinkle) / 0.2))" }} />
 
-            {/* Content */}
             <motion.div
               className="relative z-10 flex flex-col justify-center items-center flex-1 px-8 gap-2"
               variants={stagger}
@@ -158,7 +142,7 @@ const Navbar = () => {
 
               <motion.div variants={itemVariant} className="mt-8">
                 <a href="#" className="inline-block">
-                  <img src={appStoreBadge} alt="Download on the App Store" className="h-12 w-auto" />
+                  <img src={appStoreBadge} alt={t.hero.appStoreAlt} className="h-12 w-auto" />
                 </a>
               </motion.div>
             </motion.div>
