@@ -13,9 +13,10 @@ const Navbar = () => {
   const [langOpen, setLangOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  const toggleLanguage = () => {
+  const switchTo = (lang: "en" | "nl") => {
     const hash = window.location.hash;
-    navigate(locale === "en" ? `/nl${hash}` : `/${hash}`);
+    navigate(lang === "nl" ? `/nl${hash}` : `/${hash}`);
+    setLangOpen(false);
   };
 
   useEffect(() => {
