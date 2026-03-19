@@ -156,13 +156,10 @@ const Navbar = () => {
                 </motion.a>
               ))}
 
-              <motion.div variants={itemVariant} className="mt-8 w-full max-w-xs">
-                <button
-                  className="bg-foreground text-background px-8 py-4 rounded-full text-base font-semibold w-full"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  Download App
-                </button>
+              <motion.div variants={itemVariant} className="mt-8">
+                <a href="#" className="inline-block">
+                  <img src={appStoreBadge} alt="Download on the App Store" className="h-12 w-auto" />
+                </a>
               </motion.div>
 
               <motion.div variants={itemVariant} className="mt-4">
