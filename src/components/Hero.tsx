@@ -48,7 +48,7 @@ const Hero = () => (
       <motion.div
         {...fadeIn}
         transition={{ delay: 0.2, duration: 0.7, ease }}
-        className="flex justify-center mb-16"
+        className="flex justify-center mb-12"
       >
         <a href="#" className="inline-block">
           <img
