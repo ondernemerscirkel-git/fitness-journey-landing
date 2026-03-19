@@ -1,9 +1,12 @@
 import { Instagram, Twitter, Linkedin } from "lucide-react";
-import { useTranslations } from "@/i18n/useTranslations";
+import { Link } from "react-router-dom";
+import { useTranslations, useLocale } from "@/i18n/useTranslations";
 import vellicLogoBg from "@/assets/vellic-logo-bg.png";
 
 const Footer = () => {
   const t = useTranslations();
+  const locale = useLocale();
+  const privacyPath = locale === "nl" ? "/nl/privacy" : "/privacy";
 
   return (
     <footer className="bg-foreground text-background pt-20 pb-6 px-6 relative overflow-hidden">
@@ -50,9 +53,13 @@ const Footer = () => {
           </div>
         </div>
 
-        <p className="mt-10 text-center text-[11px] text-primary/50 font-body tracking-wide">
-          © {new Date().getFullYear()} Vellic Labs Inc.
-        </p>
+        <div className="mt-10 flex flex-col md:flex-row items-center justify-center gap-3 text-[11px] text-primary/50 font-body tracking-wide">
+          <span>© {new Date().getFullYear()} Vellic Labs Inc.</span>
+          <span className="hidden md:inline">·</span>
+          <Link to={privacyPath} className="hover:text-primary transition-colors duration-200">
+            Privacy Policy
+          </Link>
+        </div>
       </div>
     </footer>
   );
