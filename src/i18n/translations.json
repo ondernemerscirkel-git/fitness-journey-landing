@@ -1,7 +1,7 @@
 {
   "en": {
     "nav": {
-      "brand": "VITA.",
+      "brand": "Vellic.",
       "links": ["Home", "Features", "Pricing", "Testimonials"],
       "downloadApp": "Download App"
     },
@@ -10,7 +10,7 @@
       "title2": "At Your Own Pace.",
       "subtitle": "A thoughtfully designed platform to help you track progress, build healthy routines, and stay connected to your goals — wherever life takes you.",
       "appStoreAlt": "Download on the App Store",
-      "imageAlt": "VITA fitness app screens showing workout tracking, progress insights, and a rest timer"
+      "imageAlt": "Vellic fitness app screens showing workout tracking, progress insights, and a rest timer"
     },
     "features": {
       "heading1": "Everything You Need.",
@@ -35,35 +35,26 @@
       ],
       "mockups": [
         { "title": "Guided Programs", "desc": "Follow structured training plans that adapt as you progress." },
-        {
-          "title": "Exercise Library",
-          "desc": "Explore clear, easy-to-follow guidance for every movement in your routine."
-        },
-        {
-          "title": "Progress Insights",
-          "desc": "Visualize strength, consistency, and milestones through clean, simple charts."
-        },
+        { "title": "Exercise Library", "desc": "Explore clear, easy-to-follow guidance for every movement in your routine." },
+        { "title": "Progress Insights", "desc": "Visualize strength, consistency, and milestones through clean, simple charts." },
         { "title": "Training Log", "desc": "Keep your full workout history organized and easy to revisit." },
-        {
-          "title": "Live Tracking",
-          "desc": "Record sets, reps, and rest in real time with a focused, distraction-free experience."
-        }
+        { "title": "Live Tracking", "desc": "Record sets, reps, and rest in real time with a focused, distraction-free experience." }
       ]
     },
     "benefits": {
-      "heading": "Why People Choose VITA",
+      "heading": "Why Use Vellic",
       "cards": [
         {
-          "title": "Calm by Design",
-          "desc": "A clean, dark interface that feels modern, focused, and easy on the eyes — so you can stay present during every session."
+          "title": "Dark Theme",
+          "desc": "A premium dark interface that's modern, focused, and easy on the eyes — so you can stay present during every session."
         },
         {
-          "title": "Effortless to Use",
-          "desc": "Simple from the start. No steep learning curve, no unnecessary complexity — just a smooth experience that supports your routine."
+          "title": "Easy to Use",
+          "desc": "Vellic is incredibly intuitive. Start tracking your workouts in seconds with zero learning curve."
         },
         {
-          "title": "Track What Matters",
-          "desc": "From sets and reps to volume and personal bests, VITA helps you keep a clear view of your progress over time."
+          "title": "Track Everything",
+          "desc": "From sets and reps to weight on every exercise, workout count, and volume — Vellic tracks it all."
         }
       ]
     },
@@ -75,28 +66,28 @@
       "features": ["Complete Workout Library", "Advanced Progress Insights", "AI-Powered Bench Press Support"]
     },
     "cta": {
-      "heading1": "Download VITA &",
+      "heading1": "Download Vellic &",
       "heading2": "Move Forward with Confidence",
       "qrLabel": "QR CODE",
       "appStoreAlt": "Download on the App Store"
     },
     "testimonials": {
-      "heading": "Real People. Meaningful Progress.",
+      "heading": "Real People. Real Results.",
       "items": [
         {
           "name": "Sarah K.",
           "role": "Marathon Runner",
-          "quote": "VITA brought clarity to my training. I can see my progress more clearly and stay consistent without overthinking it."
+          "quote": "Vellic brought clarity to my training. I can see my progress more clearly and stay consistent without overthinking it."
         },
         {
           "name": "James R.",
           "role": "CrossFit Coach",
-          "quote": "It’s one of the few fitness apps that feels both powerful and easy to use. I’m happy to recommend it to my clients."
+          "quote": "It's one of the few fitness apps that feels both powerful and easy to use. I'm happy to recommend it to my clients."
         },
         {
           "name": "Maria L.",
           "role": "Yoga Instructor",
-          "quote": "VITA feels balanced and thoughtful. It supports my overall wellness routine in a way that feels natural."
+          "quote": "Vellic feels balanced and thoughtful. It supports my overall wellness routine in a way that feels natural."
         },
         {
           "name": "David C.",
@@ -106,29 +97,29 @@
         {
           "name": "Elena P.",
           "role": "Personal Trainer",
-          "quote": "The progress summaries are clear, helpful, and easy to share. My clients feel more motivated when they can actually see how far they’ve come."
+          "quote": "The progress summaries are clear, helpful, and easy to share. My clients feel more motivated seeing how far they've come."
         },
         {
           "name": "Tom W.",
           "role": "Weekend Athlete",
-          "quote": "VITA helps me stay on track without making fitness feel complicated. It fits naturally into my week."
+          "quote": "Vellic helps me stay on track without making fitness feel complicated. It fits naturally into my week."
         }
       ]
     },
     "footer": {
-      "brand": "VITA.",
+      "brand": "Vellic.",
       "tagline": "A calm, modern fitness platform built to help you train with clarity, consistency, and confidence.",
       "productHeading": "Product",
       "productLinks": ["Features", "Integrations", "Pricing", "Changelog"],
       "connectHeading": "Connect",
       "newsletterHeading": "Stay Updated",
       "emailPlaceholder": "Email address",
-      "copyright": "© 2024 VITA Labs Inc. All rights reserved."
+      "copyright": "© 2024 Vellic Labs Inc. All rights reserved."
     }
   },
   "nl": {
     "nav": {
-      "brand": "VITA.",
+      "brand": "Vellic.",
       "links": ["Home", "Functies", "Prijzen", "Getuigenissen"],
       "downloadApp": "Download App"
     },
@@ -137,7 +128,7 @@
       "title2": "op jouw tempo.",
       "subtitle": "Een zorgvuldig ontworpen platform dat je helpt om je voortgang bij te houden, gezonde routines op te bouwen en verbonden te blijven met je doelen — waar je ook bent.",
       "appStoreAlt": "Download in de App Store",
-      "imageAlt": "VITA fitness app schermen met workoutregistratie, voortgangsinzichten en een rusttimer"
+      "imageAlt": "Vellic fitness app schermen met workoutregistratie, voortgangsinzichten en een rusttimer"
     },
     "features": {
       "heading1": "Alles wat je nodig hebt.",
@@ -161,42 +152,27 @@
         }
       ],
       "mockups": [
-        {
-          "title": "Begeleide Programma’s",
-          "desc": "Volg gestructureerde trainingsschema’s die zich aanpassen aan jouw voortgang."
-        },
-        {
-          "title": "Oefeningenbibliotheek",
-          "desc": "Bekijk duidelijke en gemakkelijk te volgen uitleg voor elke oefening in je routine."
-        },
-        {
-          "title": "Voortgangsinzichten",
-          "desc": "Visualiseer kracht, consistentie en mijlpalen met heldere, eenvoudige grafieken."
-        },
-        {
-          "title": "Trainingslogboek",
-          "desc": "Bewaar je volledige trainingsgeschiedenis overzichtelijk op één plek."
-        },
-        {
-          "title": "Live Tracking",
-          "desc": "Registreer sets, herhalingen en rust in realtime in een rustige, gefocuste omgeving."
-        }
+        { "title": "Begeleide Programma's", "desc": "Volg gestructureerde trainingsschema's die zich aanpassen aan jouw voortgang." },
+        { "title": "Oefeningenbibliotheek", "desc": "Bekijk duidelijke en gemakkelijk te volgen uitleg voor elke oefening in je routine." },
+        { "title": "Voortgangsinzichten", "desc": "Visualiseer kracht, consistentie en mijlpalen met heldere, eenvoudige grafieken." },
+        { "title": "Trainingslogboek", "desc": "Bewaar je volledige trainingsgeschiedenis overzichtelijk op één plek." },
+        { "title": "Live Tracking", "desc": "Registreer sets, herhalingen en rust in realtime in een rustige, gefocuste omgeving." }
       ]
     },
     "benefits": {
-      "heading": "Waarom mensen voor VITA kiezen",
+      "heading": "Waarom Vellic gebruiken",
       "cards": [
         {
-          "title": "Rustig design",
-          "desc": "Een strakke donkere interface die modern en prettig oogt, zodat jij je tijdens elke training beter kunt focussen."
+          "title": "Donker thema",
+          "desc": "Een premium donkere interface die modern en prettig oogt, zodat jij je tijdens elke training beter kunt focussen."
         },
         {
-          "title": "Moeiteloos in gebruik",
-          "desc": "Eenvoudig vanaf het eerste moment. Geen steile leercurve en geen onnodige complexiteit — alleen een soepele ervaring die jouw routine ondersteunt."
+          "title": "Makkelijk in gebruik",
+          "desc": "Vellic is ongelooflijk intuïtief. Begin binnen enkele seconden met het bijhouden van je workouts, zonder leercurve."
         },
         {
-          "title": "Volg wat belangrijk is",
-          "desc": "Van sets en herhalingen tot volume en persoonlijke records: VITA geeft je een helder beeld van je voortgang in de tijd."
+          "title": "Volg alles",
+          "desc": "Van sets en herhalingen tot gewicht per oefening, aantal workouts en volume — Vellic houdt alles bij."
         }
       ]
     },
@@ -212,18 +188,18 @@
       ]
     },
     "cta": {
-      "heading1": "Download VITA &",
+      "heading1": "Download Vellic &",
       "heading2": "werk met vertrouwen aan je doelen",
       "qrLabel": "QR CODE",
       "appStoreAlt": "Download in de App Store"
     },
     "testimonials": {
-      "heading": "Echte mensen. Echte vooruitgang.",
+      "heading": "Echte mensen. Echte resultaten.",
       "items": [
         {
           "name": "Sarah K.",
           "role": "Marathonloper",
-          "quote": "VITA heeft rust en overzicht gebracht in mijn training. Ik zie mijn voortgang duidelijker en blijf makkelijker consistent."
+          "quote": "Vellic heeft rust en overzicht gebracht in mijn training. Ik zie mijn voortgang duidelijker en blijf makkelijker consistent."
         },
         {
           "name": "James R.",
@@ -233,7 +209,7 @@
         {
           "name": "Maria L.",
           "role": "Yoga-instructeur",
-          "quote": "VITA voelt doordacht en in balans. Het ondersteunt mijn welzijnsroutine op een manier die heel natuurlijk aanvoelt."
+          "quote": "Vellic voelt doordacht en in balans. Het ondersteunt mijn welzijnsroutine op een manier die heel natuurlijk aanvoelt."
         },
         {
           "name": "David C.",
@@ -248,19 +224,19 @@
         {
           "name": "Tom W.",
           "role": "Recreatieve sporter",
-          "quote": "VITA helpt me om op koers te blijven zonder dat fitness ingewikkeld aanvoelt. Het past gewoon natuurlijk in mijn week."
+          "quote": "Vellic helpt me om op koers te blijven zonder dat fitness ingewikkeld aanvoelt. Het past gewoon natuurlijk in mijn week."
         }
       ]
     },
     "footer": {
-      "brand": "VITA.",
+      "brand": "Vellic.",
       "tagline": "Een rustig en modern fitnessplatform dat je helpt te trainen met helderheid, consistentie en vertrouwen.",
       "productHeading": "Product",
       "productLinks": ["Functies", "Integraties", "Prijzen", "Wijzigingslog"],
       "connectHeading": "Verbinden",
       "newsletterHeading": "Blijf op de hoogte",
       "emailPlaceholder": "E-mailadres",
-      "copyright": "© 2024 VITA Labs Inc. Alle rechten voorbehouden."
+      "copyright": "© 2024 Vellic Labs Inc. Alle rechten voorbehouden."
     }
   }
 }
