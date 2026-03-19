@@ -56,7 +56,7 @@ const Footer = () => {
         <div className="mt-10 flex flex-col md:flex-row items-center justify-center gap-3 text-[11px] text-primary/50 font-body tracking-wide">
           <span>© {new Date().getFullYear()} Vellic Labs Inc.</span>
           <span className="hidden md:inline">·</span>
-          <Link to={privacyPath} className="hover:text-primary transition-colors duration-200">
+          <Link to={privacyPath} onClick={() => window.scrollTo(0, 0)} className="hover:text-primary transition-colors duration-200">
             Privacy Policy
           </Link>
         </div>
