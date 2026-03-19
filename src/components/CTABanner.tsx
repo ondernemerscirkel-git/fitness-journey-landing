@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import appStoreBadge from "@/assets/app-store-badge.png";
 import { useTranslations } from "@/i18n/useTranslations";
 
 const fadeIn = {
