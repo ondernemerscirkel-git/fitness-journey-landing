@@ -11,25 +11,25 @@ const fadeIn = {
 
 const initials = (name: string) => name.split(" ").map(n => n[0]).join("");
 
-const TestimonialCard = ({ name, role, quote }: { name: string; role: string; quote: string }) => (
+const TestimonialCard = ({ name, role, quote, featured = false }: { name: string; role: string; quote: string; featured?: boolean }) => (
   <motion.div
     {...fadeIn}
     whileHover={{ y: -2 }}
-    className="bg-card rounded-[28px] p-8 transition-shadow hover:shadow-card"
+    className={`bg-card rounded-[28px] transition-shadow hover:shadow-card ${featured ? "p-10" : "p-8"}`}
   >
     <div className="flex gap-1 mb-4">
       {[...Array(5)].map((_, i) => (
-        <Star key={i} size={16} className="text-primary fill-primary" />
+        <Star key={i} size={featured ? 18 : 16} className="text-primary fill-primary" />
       ))}
     </div>
-    <p className="text-foreground font-body text-sm leading-relaxed mb-6">"{quote}"</p>
+    <p className={`text-foreground font-body leading-relaxed mb-6 ${featured ? "text-base" : "text-sm"}`}>"{quote}"</p>
     <div className="flex items-center gap-3">
-      <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-xs font-display font-bold text-primary">
+      <div className={`rounded-full bg-primary/20 flex items-center justify-center font-display font-bold text-primary ${featured ? "w-12 h-12 text-sm" : "w-10 h-10 text-xs"}`}>
         {initials(name)}
       </div>
       <div>
-        <div className="text-sm font-display font-semibold text-foreground">{name}</div>
-        <div className="text-xs text-muted-foreground font-body">{role}</div>
+        <div className={`font-display font-semibold text-foreground ${featured ? "text-base" : "text-sm"}`}>{name}</div>
+        <div className={`text-muted-foreground font-body ${featured ? "text-sm" : "text-xs"}`}>{role}</div>
       </div>
     </div>
   </motion.div>
@@ -37,10 +37,11 @@ const TestimonialCard = ({ name, role, quote }: { name: string; role: string; qu
 
 const Testimonials = () => {
   const t = useTranslations();
+  const items = t.testimonials.items.slice(0, 3);
 
   return (
     <section id="testimonials" className="py-32 px-6 bg-background">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <motion.h2
           {...fadeIn}
           className="text-4xl md:text-5xl font-display font-bold text-center text-foreground mb-20"
@@ -48,10 +49,29 @@ const Testimonials = () => {
           {t.testimonials.heading}
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {t.testimonials.items.map((item) => (
+        {/* Mobile: stack */}
+        <div className="flex flex-col gap-6 md:hidden">
+          {items.map((item) => (
             <TestimonialCard key={item.name} {...item} />
           ))}
+        </div>
+
+        {/* Desktop: podium layout */}
+        <div className="hidden md:grid grid-cols-3 gap-6 items-end">
+          {/* 2nd place - left, lower */}
+          <div className="mt-12">
+            <TestimonialCard {...items[1]} />
+          </div>
+
+          {/* 1st place - center, top */}
+          <div>
+            <TestimonialCard {...items[0]} featured />
+          </div>
+
+          {/* 3rd place - right, lower */}
+          <div className="mt-12">
+            <TestimonialCard {...items[2]} />
+          </div>
         </div>
       </div>
     </section>
