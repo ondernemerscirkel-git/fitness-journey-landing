@@ -21,9 +21,12 @@ interface BenefitCardProps {
   image: string;
 }
 
-const BenefitCard = ({ icon, title, desc, image }: BenefitCardProps) => (
+const BenefitCard = ({ icon, title, desc, image, index }: BenefitCardProps & { index: number }) => (
   <motion.div
-    {...fadeIn}
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, amount: 0.2 }}
+    transition={{ duration: 0.6, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
     whileHover={{ y: -4 }}
     className="bg-card rounded-[32px] p-8 pb-0 overflow-hidden flex flex-col transition-shadow hover:shadow-card"
   >
@@ -55,7 +58,7 @@ const Benefits = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {t.benefits.cards.map((card, i) => (
-            <BenefitCard key={i} icon={icons[i]} title={card.title} desc={card.desc} image={images[i]} />
+            <BenefitCard key={i} index={i} icon={icons[i]} title={card.title} desc={card.desc} image={images[i]} />
           ))}
         </div>
       </div>
