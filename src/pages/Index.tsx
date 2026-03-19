@@ -32,6 +32,7 @@ const Index = () => {
     <Testimonials />
     <Footer />
   </div>
-);
+  );
+};
 
 export default Index;
