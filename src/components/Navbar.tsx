@@ -78,7 +78,7 @@ const Navbar = () => {
             {navLinks.map((item) => (
               <a
                 key={item}
-                href={`#${item.toLowerCase()}`}
+                href={`${locale === "nl" ? "/nl" : "/"}#${item.toLowerCase()}`}
                 className="hover:text-primary transition-colors duration-200"
               >
                 {item}
