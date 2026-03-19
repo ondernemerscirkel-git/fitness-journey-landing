@@ -58,7 +58,7 @@ const Benefits = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {t.benefits.cards.map((card, i) => (
-            <BenefitCard key={i} icon={icons[i]} title={card.title} desc={card.desc} image={images[i]} />
+            <BenefitCard key={i} index={i} icon={icons[i]} title={card.title} desc={card.desc} image={images[i]} />
           ))}
         </div>
       </div>
