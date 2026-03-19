@@ -30,11 +30,11 @@
       ]
     },
     "benefits": {
-      "heading": "Why Thousands Trust VITA",
+      "heading": "Why Use VITA",
       "cards": [
-        { "title": "Privacy First", "desc": "End-to-end encrypted health data with zero third-party sharing." },
-        { "title": "Instant Sync", "desc": "Seamless integration with Apple Health, Google Fit, and 40+ wearables." },
-        { "title": "Holistic Health", "desc": "Track sleep, stress, nutrition, and activity in one unified dashboard." }
+        { "title": "Dark Theme", "desc": "A sleek, modern dark interface designed to reduce eye strain and look stunning. Every screen is crafted with a premium dark aesthetic." },
+        { "title": "Easy to Use", "desc": "Intuitive design that gets out of your way. Start tracking your workouts in seconds — no learning curve, no complicated setup." },
+        { "title": "Track Everything", "desc": "Log every set, rep, and weight for every exercise. Track workout count, volume, personal records, and watch your progress over time." }
       ]
     },
     "pricing": {
