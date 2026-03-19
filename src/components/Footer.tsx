@@ -35,15 +35,21 @@ const Footer = () => {
           </div>
 
           <div className="flex items-center gap-6 text-background/30">
-            {t.footer.productLinks.map((link) => (
-              <a
-                key={link}
-                href="#"
-                className="text-sm font-body hover:text-primary transition-colors duration-200"
-              >
-                {link}
-              </a>
-            ))}
+            {t.footer.productLinks.map((link, i) => {
+              const targets = ["features", "", "pricing", ""];
+              const target = targets[i];
+              const basePath = locale === "nl" ? "/nl" : "/";
+              const href = target ? `${basePath}#${target}` : "#";
+              return (
+                <a
+                  key={link}
+                  href={href}
+                  className="text-sm font-body hover:text-primary transition-colors duration-200"
+                >
+                  {link}
+                </a>
+              );
+            })}
           </div>
 
           <div className="flex items-center gap-4 text-background/30">
