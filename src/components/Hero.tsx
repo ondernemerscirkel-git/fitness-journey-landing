@@ -34,7 +34,7 @@ const Hero = () => {
       <img
         src={vellicLogoBg}
         alt=""
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[45%] w-[500px] md:w-[700px] lg:w-[800px] opacity-10 pointer-events-none select-none"
+        className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[45%] w-[500px] md:w-[700px] lg:w-[800px] opacity-10 pointer-events-none select-none"
       />
 
       <div className="max-w-7xl mx-auto text-center relative z-10">
@@ -67,8 +67,7 @@ const Hero = () => {
 
         <motion.div
           initial={{ y: 80, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
+          animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.9, ease }}
           className="relative max-w-5xl mx-auto"
         >
