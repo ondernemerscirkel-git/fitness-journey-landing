@@ -99,7 +99,7 @@ const Features = () => {
             </AnimatePresence>
 
             <div className="relative w-64 flex-1 mt-6">
-              <AnimatePresence mode="wait">
+              <AnimatePresence initial={false}>
                 <motion.img
                   key={active}
                   src={mockupImages[active]}
@@ -108,7 +108,7 @@ const Features = () => {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.8, ease: "easeInOut" }}
-                  className="w-full h-full object-contain object-top"
+                  className="absolute inset-0 w-full h-full object-contain object-top"
                 />
               </AnimatePresence>
             </div>
