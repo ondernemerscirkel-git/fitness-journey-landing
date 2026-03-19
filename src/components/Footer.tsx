@@ -5,7 +5,9 @@ const Footer = () => {
   const t = useTranslations();
 
   return (
-    <footer className="bg-foreground text-background pt-24 pb-12 px-6">
+    <footer className="bg-foreground text-background pt-24 pb-12 px-6 relative overflow-hidden">
+      <div className="absolute top-[-10%] left-[-5%] w-80 h-80 rounded-full opacity-15 blur-3xl pointer-events-none animate-float" style={{ background: "radial-gradient(circle, hsl(var(--primary) / 0.6), hsl(var(--vita-lavender-deep) / 0.3))" }} />
+      <div className="absolute bottom-[10%] right-[-8%] w-72 h-72 rounded-full opacity-10 blur-3xl pointer-events-none animate-float-delayed" style={{ background: "radial-gradient(circle, hsl(var(--vita-periwinkle) / 0.5), hsl(var(--primary) / 0.2))" }} />
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
         <div>
           <div className="text-2xl font-display font-bold tracking-tighter mb-6">{t.footer.brand}</div>
