@@ -39,6 +39,7 @@ const Navbar = () => {
   };
 
   const navLinks = t.nav.links;
+  const navTargets = ["home", "features", "pricing", "testimonials"];
 
   return (
     <>
@@ -75,10 +76,10 @@ const Navbar = () => {
             animate={{ fontSize: scrolled ? "0.875rem" : "1rem" }}
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
           >
-            {navLinks.map((item) => (
+            {navLinks.map((item, index) => (
               <a
                 key={item}
-                href={`${locale === "nl" ? "/nl" : "/"}#${item.toLowerCase()}`}
+                href={`${locale === "nl" ? "/nl" : "/"}#${navTargets[index]}`}
                 className="hover:text-primary transition-colors duration-200"
               >
                 {item}
@@ -161,10 +162,10 @@ const Navbar = () => {
               animate="animate"
               exit="exit"
             >
-              {navLinks.map((item) => (
+              {navLinks.map((item, index) => (
                 <motion.a
                   key={item}
-                  href={`${locale === "nl" ? "/nl" : "/"}#${item.toLowerCase()}`}
+                  href={`${locale === "nl" ? "/nl" : "/"}#${navTargets[index]}`}
                   variants={itemVariant}
                   className="text-foreground font-display font-bold text-4xl py-3 hover:text-primary transition-colors duration-200"
                   onClick={() => setMobileOpen(false)}
