@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Shield, Zap, Heart } from "lucide-react";
+import { Moon, Hand, BarChart3 } from "lucide-react";
 import type { ReactNode } from "react";
 import { useTranslations } from "@/i18n/useTranslations";
 
@@ -41,7 +41,7 @@ const BenefitCard = ({ icon, title, desc }: BenefitCardProps) => (
   </motion.div>
 );
 
-const icons = [<Shield size={22} />, <Zap size={22} />, <Heart size={22} />];
+const icons = [<Moon size={22} />, <Hand size={22} />, <BarChart3 size={22} />];
 
 const Benefits = () => {
   const t = useTranslations();
