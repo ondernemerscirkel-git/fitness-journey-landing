@@ -81,7 +81,7 @@ const Navbar = () => {
           </a>
 
           <motion.div
-            className="hidden md:flex items-center gap-10 font-medium text-muted-foreground"
+            className="hidden lg:flex items-center gap-10 font-medium text-muted-foreground"
             animate={{ fontSize: scrolled ? "0.875rem" : "1rem" }}
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
           >
@@ -96,7 +96,7 @@ const Navbar = () => {
             ))}
           </motion.div>
 
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-3">
             <div className="relative">
               <motion.button
                 whileTap={{ scale: 0.95 }}
@@ -159,7 +159,7 @@ const Navbar = () => {
           </div>
 
           <button
-            className="md:hidden text-foreground relative z-[60]"
+            className="lg:hidden text-foreground relative z-[60]"
             onClick={() => setMobileOpen(!mobileOpen)}
           >
             <AnimatePresence mode="wait">
@@ -180,7 +180,7 @@ const Navbar = () => {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            className="fixed inset-0 z-[55] md:hidden flex flex-col overflow-hidden"
+            className="fixed inset-0 z-[55] lg:hidden flex flex-col overflow-hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
