@@ -10,9 +10,8 @@ const fadeIn = {
 
 const features = [
   { icon: Dumbbell, label: "Full Workout Library" },
-  { icon: Brain, label: "AI-Powered Coaching" },
   { icon: BarChart3, label: "Advanced Analytics" },
-  { icon: Sparkles, label: "Personalized Plans" },
+  { icon: Brain, label: "AI-Powered Benchpress" },
 ];
 
 const Pricing = () => (
