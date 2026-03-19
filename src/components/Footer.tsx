@@ -50,7 +50,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <p className="mt-12 text-center text-[11px] text-background/20 font-body tracking-wide pb-4">
+        <p className="mt-10 text-center text-[11px] text-primary/50 font-body tracking-wide">
           © {new Date().getFullYear()} Vellic Labs Inc.
         </p>
       </div>
