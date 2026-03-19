@@ -38,7 +38,7 @@ const Pricing = () => {
         >
           {t.pricing.heading1}
           <br />
-          <span className="text-primary">{t.pricing.heading2}</span>
+          {t.pricing.heading2}
         </motion.h2>
 
         <motion.p

@@ -2,13 +2,19 @@
   "en": {
     "nav": {
       "brand": "Leanify",
-      "links": ["Home", "Features", "What's Included", "Testimonials"],
+      "links": [
+        "Home",
+        "Features",
+        "What's Included",
+        "Testimonials"
+      ],
       "downloadApp": "Download App"
     },
     "hero": {
       "title1": "Your Fitness Journey,",
       "title2": "At Your Own Pace.",
       "subtitle": "A thoughtfully designed platform to help you track progress, build healthy routines, and stay connected to your goals — wherever life takes you.",
+      "subtitleMobile": "Track progress, build routines, and stay connected — wherever you go.",
       "appStoreAlt": "Download on the App Store",
       "imageAlt": "Leanify fitness app screens showing workout tracking, progress insights, and a rest timer"
     },
@@ -34,11 +40,26 @@
         }
       ],
       "mockups": [
-        { "title": "Guided Programs", "desc": "Follow structured training plans that adapt as you progress." },
-        { "title": "Exercise Library", "desc": "Explore clear, easy-to-follow guidance for every movement in your routine." },
-        { "title": "Progress Insights", "desc": "Visualize strength, consistency, and milestones through clean, simple charts." },
-        { "title": "Training Log", "desc": "Keep your full workout history organized and easy to revisit." },
-        { "title": "Live Tracking", "desc": "Record sets, reps, and rest in real time with a focused, distraction-free experience." }
+        {
+          "title": "Guided Programs",
+          "desc": "Follow structured training plans that adapt as you progress."
+        },
+        {
+          "title": "Exercise Library",
+          "desc": "Explore clear, easy-to-follow guidance for every movement in your routine."
+        },
+        {
+          "title": "Progress Insights",
+          "desc": "Visualize strength, consistency, and milestones through clean, simple charts."
+        },
+        {
+          "title": "Training Log",
+          "desc": "Keep your full workout history organized and easy to revisit."
+        },
+        {
+          "title": "Live Tracking",
+          "desc": "Record sets, reps, and rest in real time with a focused, distraction-free experience."
+        }
       ]
     },
     "benefits": {
@@ -63,11 +84,17 @@
       "heading1": "Everything You Need,",
       "heading2": "Included from Day One",
       "subtitle": "No barriers, no locked features, and no surprises down the road. Just a complete fitness experience that's fully yours from the moment you start.",
-      "features": ["Complete Workout Library", "Advanced Progress Insights", "AI-Powered Bench Press Support"]
+      "features": [
+        "Complete Workout Library",
+        "Advanced Progress Insights",
+        "AI-Powered Bench Press Support"
+      ]
     },
     "cta": {
       "heading1": "Download Leanify &",
       "heading2": "Move Forward with Confidence",
+      "headingMobile1": "Download Leanify",
+      "headingMobile2": "Today.",
       "qrLabel": "QR CODE",
       "appStoreAlt": "Download on the App Store"
     },
@@ -110,7 +137,11 @@
       "brand": "Leanify",
       "tagline": "A calm, modern fitness platform built to help you train with clarity, consistency, and confidence.",
       "productHeading": "Product",
-      "productLinks": ["Features", "Integrations", "What's Included"],
+      "productLinks": [
+        "Features",
+        "Integrations",
+        "What's Included"
+      ],
       "connectHeading": "Connect",
       "newsletterHeading": "Stay Updated",
       "emailPlaceholder": "Email address",
@@ -120,13 +151,19 @@
   "nl": {
     "nav": {
       "brand": "Leanify",
-      "links": ["Home", "Functies", "Wat zit erin", "Getuigenissen"],
+      "links": [
+        "Home",
+        "Functies",
+        "Wat zit erin",
+        "Getuigenissen"
+      ],
       "downloadApp": "Download App"
     },
     "hero": {
       "title1": "Jouw fitnessreis,",
       "title2": "op jouw tempo.",
       "subtitle": "Een zorgvuldig ontworpen platform dat je helpt om je voortgang bij te houden, gezonde routines op te bouwen en verbonden te blijven met je doelen — waar je ook bent.",
+      "subtitleMobile": "Houd je voortgang bij, bouw routines op en blijf verbonden — waar je ook bent.",
       "appStoreAlt": "Download in de App Store",
       "imageAlt": "Leanify fitness app schermen met workoutregistratie, voortgangsinzichten en een rusttimer"
     },
@@ -152,11 +189,26 @@
         }
       ],
       "mockups": [
-        { "title": "Begeleide Programma's", "desc": "Volg gestructureerde trainingsschema's die zich aanpassen aan jouw voortgang." },
-        { "title": "Oefeningenbibliotheek", "desc": "Bekijk duidelijke en gemakkelijk te volgen uitleg voor elke oefening in je routine." },
-        { "title": "Voortgangsinzichten", "desc": "Visualiseer kracht, consistentie en mijlpalen met heldere, eenvoudige grafieken." },
-        { "title": "Trainingslogboek", "desc": "Bewaar je volledige trainingsgeschiedenis overzichtelijk op één plek." },
-        { "title": "Live Tracking", "desc": "Registreer sets, herhalingen en rust in realtime in een rustige, gefocuste omgeving." }
+        {
+          "title": "Begeleide Programma's",
+          "desc": "Volg gestructureerde trainingsschema's die zich aanpassen aan jouw voortgang."
+        },
+        {
+          "title": "Oefeningenbibliotheek",
+          "desc": "Bekijk duidelijke en gemakkelijk te volgen uitleg voor elke oefening in je routine."
+        },
+        {
+          "title": "Voortgangsinzichten",
+          "desc": "Visualiseer kracht, consistentie en mijlpalen met heldere, eenvoudige grafieken."
+        },
+        {
+          "title": "Trainingslogboek",
+          "desc": "Bewaar je volledige trainingsgeschiedenis overzichtelijk op één plek."
+        },
+        {
+          "title": "Live Tracking",
+          "desc": "Registreer sets, herhalingen en rust in realtime in een rustige, gefocuste omgeving."
+        }
       ]
     },
     "benefits": {
@@ -190,6 +242,8 @@
     "cta": {
       "heading1": "Download Leanify &",
       "heading2": "werk met vertrouwen aan je doelen",
+      "headingMobile1": "Download Leanify",
+      "headingMobile2": "Vandaag.",
       "qrLabel": "QR CODE",
       "appStoreAlt": "Download in de App Store"
     },
@@ -232,7 +286,11 @@
       "brand": "Leanify",
       "tagline": "Een rustig en modern fitnessplatform dat je helpt te trainen met helderheid, consistentie en vertrouwen.",
       "productHeading": "Product",
-      "productLinks": ["Functies", "Integraties", "Wat zit erin"],
+      "productLinks": [
+        "Functies",
+        "Integraties",
+        "Wat zit erin"
+      ],
       "connectHeading": "Verbinden",
       "newsletterHeading": "Blijf op de hoogte",
       "emailPlaceholder": "E-mailadres",

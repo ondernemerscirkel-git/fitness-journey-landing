@@ -10,6 +10,8 @@ import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { useLocale } from "@/i18n/useTranslations";
+import ogImageEn from "@/assets/OG sharing/EN.png";
+import ogImageNl from "@/assets/OG sharing/NL.png";
 
 const Index = () => {
   const locale = useLocale();
@@ -21,6 +23,7 @@ const Index = () => {
       description:
         "Track workouts, follow guided bench press programs, and build better routines with Leanify's clear analytics, smart reminders, and calm fitness experience.",
       path: "/",
+      image: ogImageEn,
       imageAlt: "Leanify fitness app hero preview showing workout tracking and progress insights",
     },
     nl: {
@@ -28,6 +31,7 @@ const Index = () => {
       description:
         "Houd workouts bij, volg begeleide bench press-programma's en bouw betere routines op met Leanify's heldere inzichten, slimme herinneringen en rustige fitnesservaring.",
       path: "/nl",
+      image: ogImageNl,
       imageAlt: "Leanify fitness app preview met workoutregistratie en voortgangsinzichten",
     },
   } as const;
@@ -52,7 +56,7 @@ const Index = () => {
         applicationCategory: "HealthApplication",
         operatingSystem: "iOS",
         description: currentSeo.description,
-        image: "/og-image.png",
+        image: currentSeo.image,
       },
       {
         "@type": "WebSite",
@@ -78,6 +82,7 @@ const Index = () => {
         title={currentSeo.title}
         description={currentSeo.description}
         path={currentSeo.path}
+        image={currentSeo.image}
         locale={locale}
         imageAlt={currentSeo.imageAlt}
         keywords={[

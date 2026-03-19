@@ -3,6 +3,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { useLocale } from "@/i18n/useTranslations";
+import ogImageEn from "@/assets/OG sharing/EN.png";
+import ogImageNl from "@/assets/OG sharing/NL.png";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 const fadeIn = {
@@ -20,12 +22,14 @@ const Privacy = () => {
       description:
         "Read how Leanify collects, uses, protects, and manages personal data across its fitness tracking platform.",
       path: "/privacy",
+      image: ogImageEn,
     },
     nl: {
       title: "Privacybeleid | Leanify",
       description:
         "Lees hoe Leanify persoonsgegevens verzamelt, gebruikt, beschermt en beheert binnen het fitnessplatform.",
       path: "/nl/privacy",
+      image: ogImageNl,
     },
   } as const;
   const currentSeo = seo[locale];
@@ -36,6 +40,7 @@ const Privacy = () => {
         title={currentSeo.title}
         description={currentSeo.description}
         path={currentSeo.path}
+        image={currentSeo.image}
         locale={locale}
         type="article"
         keywords={["Leanify", "privacy policy", "fitness app privacy", "data protection"]}
