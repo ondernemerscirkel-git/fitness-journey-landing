@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import heroDesktop from "@/assets/hero-desktop.png";
+import heroMobile from "@/assets/hero-mobile.png";
 import appStoreBadge from "@/assets/app-store-badge.png";
 
 const ease = [0.16, 1, 0.3, 1] as const;
