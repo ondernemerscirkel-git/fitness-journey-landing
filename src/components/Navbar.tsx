@@ -27,7 +27,7 @@ const Navbar = () => {
 
   const itemVariant = {
     initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] } },
+    animate: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] as const } },
     exit: { opacity: 0, y: 10, transition: { duration: 0.2 } },
   };
 
