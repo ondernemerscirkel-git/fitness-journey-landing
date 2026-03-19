@@ -120,7 +120,7 @@
   "nl": {
     "nav": {
       "brand": "Vellic",
-      "links": ["Home", "Functies", "Prijzen", "Getuigenissen"],
+      "links": ["Home", "Functies", "Wat zit erin", "Getuigenissen"],
       "downloadApp": "Download App"
     },
     "hero": {
