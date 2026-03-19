@@ -50,11 +50,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-background/[0.06] pt-6 text-center">
-          <p className="text-[11px] text-background/20 font-body tracking-wide">
-            © {new Date().getFullYear()} Vellic Labs Inc.
-          </p>
-        </div>
+        <p className="mt-12 text-center text-[11px] text-background/20 font-body tracking-wide pb-4">
+          © {new Date().getFullYear()} Vellic Labs Inc.
+        </p>
       </div>
     </footer>
   );
