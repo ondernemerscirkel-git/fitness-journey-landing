@@ -240,7 +240,7 @@ const Navbar = () => {
                   key={item}
                   href={`${locale === "nl" ? "/nl" : "/"}#${navTargets[index]}`}
                   variants={itemVariant}
-                  className="text-foreground font-display font-bold text-4xl py-3 hover:text-primary transition-colors duration-200"
+                  className="text-foreground font-display font-bold text-[32px] sm:text-4xl py-3 whitespace-nowrap hover:text-primary transition-colors duration-200 text-center w-full"
                   onClick={() => setMobileOpen(false)}
                 >
                   {item}
@@ -248,13 +248,10 @@ const Navbar = () => {
               ))}
 
 
-              <motion.div variants={itemVariant} className="mt-4">
-                <button
-                  className="rounded-full font-semibold text-foreground btn-gradient-animate flex items-center gap-1.5 px-8 py-3.5 text-lg"
-                >
-                  {t.nav.downloadApp}
-                  <ChevronRight size={18} />
-                </button>
+              <motion.div variants={itemVariant} className="mt-6 flex justify-center w-full">
+                <a href="#" className="inline-block" onClick={() => setMobileOpen(false)}>
+                  <img src={appStoreBadge} alt={t.nav.downloadApp} className="h-[52px] w-auto" />
+                </a>
               </motion.div>
             </motion.div>
           </motion.div>

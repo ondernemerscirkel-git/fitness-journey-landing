@@ -1,7 +1,7 @@
 {
   "en": {
     "nav": {
-      "brand": "Vellic",
+      "brand": "Leanify",
       "links": ["Home", "Features", "What's Included", "Testimonials"],
       "downloadApp": "Download App"
     },
@@ -10,7 +10,7 @@
       "title2": "At Your Own Pace.",
       "subtitle": "A thoughtfully designed platform to help you track progress, build healthy routines, and stay connected to your goals — wherever life takes you.",
       "appStoreAlt": "Download on the App Store",
-      "imageAlt": "Vellic fitness app screens showing workout tracking, progress insights, and a rest timer"
+      "imageAlt": "Leanify fitness app screens showing workout tracking, progress insights, and a rest timer"
     },
     "features": {
       "heading1": "Everything You Need.",
@@ -42,7 +42,7 @@
       ]
     },
     "benefits": {
-      "heading": "Why Use Vellic",
+      "heading": "Why Use Leanify",
       "cards": [
         {
           "title": "Dark Theme",
@@ -50,11 +50,11 @@
         },
         {
           "title": "Easy to Use",
-          "desc": "Vellic is incredibly intuitive. Start tracking your workouts in seconds with zero learning curve."
+          "desc": "Leanify is incredibly intuitive. Start tracking your workouts in seconds with zero learning curve."
         },
         {
           "title": "Track Everything",
-          "desc": "From sets and reps to weight on every exercise, workout count, and volume — Vellic tracks it all."
+          "desc": "From sets and reps to weight on every exercise, workout count, and volume — Leanify tracks it all."
         }
       ]
     },
@@ -66,7 +66,7 @@
       "features": ["Complete Workout Library", "Advanced Progress Insights", "AI-Powered Bench Press Support"]
     },
     "cta": {
-      "heading1": "Download Vellic &",
+      "heading1": "Download Leanify &",
       "heading2": "Move Forward with Confidence",
       "qrLabel": "QR CODE",
       "appStoreAlt": "Download on the App Store"
@@ -77,7 +77,7 @@
         {
           "name": "Sarah K.",
           "role": "Marathon Runner",
-          "quote": "Vellic brought clarity to my training. I can see my progress more clearly and stay consistent without overthinking it."
+          "quote": "Leanify brought clarity to my training. I can see my progress more clearly and stay consistent without overthinking it."
         },
         {
           "name": "James R.",
@@ -87,7 +87,7 @@
         {
           "name": "Maria L.",
           "role": "Yoga Instructor",
-          "quote": "Vellic feels balanced and thoughtful. It supports my overall wellness routine in a way that feels natural."
+          "quote": "Leanify feels balanced and thoughtful. It supports my overall wellness routine in a way that feels natural."
         },
         {
           "name": "David C.",
@@ -102,24 +102,24 @@
         {
           "name": "Tom W.",
           "role": "Weekend Athlete",
-          "quote": "Vellic helps me stay on track without making fitness feel complicated. It fits naturally into my week."
+          "quote": "Leanify helps me stay on track without making fitness feel complicated. It fits naturally into my week."
         }
       ]
     },
     "footer": {
-      "brand": "Vellic",
+      "brand": "Leanify",
       "tagline": "A calm, modern fitness platform built to help you train with clarity, consistency, and confidence.",
       "productHeading": "Product",
       "productLinks": ["Features", "Integrations", "What's Included"],
       "connectHeading": "Connect",
       "newsletterHeading": "Stay Updated",
       "emailPlaceholder": "Email address",
-      "copyright": "© 2024 Vellic Labs Inc. All rights reserved."
+      "copyright": "© 2024 Leanify Labs Inc. All rights reserved."
     }
   },
   "nl": {
     "nav": {
-      "brand": "Vellic",
+      "brand": "Leanify",
       "links": ["Home", "Functies", "Wat zit erin", "Getuigenissen"],
       "downloadApp": "Download App"
     },
@@ -128,7 +128,7 @@
       "title2": "op jouw tempo.",
       "subtitle": "Een zorgvuldig ontworpen platform dat je helpt om je voortgang bij te houden, gezonde routines op te bouwen en verbonden te blijven met je doelen — waar je ook bent.",
       "appStoreAlt": "Download in de App Store",
-      "imageAlt": "Vellic fitness app schermen met workoutregistratie, voortgangsinzichten en een rusttimer"
+      "imageAlt": "Leanify fitness app schermen met workoutregistratie, voortgangsinzichten en een rusttimer"
     },
     "features": {
       "heading1": "Alles wat je nodig hebt.",
@@ -160,7 +160,7 @@
       ]
     },
     "benefits": {
-      "heading": "Waarom Vellic gebruiken",
+      "heading": "Waarom Leanify gebruiken",
       "cards": [
         {
           "title": "Donker thema",
@@ -168,11 +168,11 @@
         },
         {
           "title": "Makkelijk in gebruik",
-          "desc": "Vellic is ongelooflijk intuïtief. Begin binnen enkele seconden met het bijhouden van je workouts, zonder leercurve."
+          "desc": "Leanify is ongelooflijk intuïtief. Begin binnen enkele seconden met het bijhouden van je workouts, zonder leercurve."
         },
         {
           "title": "Volg alles",
-          "desc": "Van sets en herhalingen tot gewicht per oefening, aantal workouts en volume — Vellic houdt alles bij."
+          "desc": "Van sets en herhalingen tot gewicht per oefening, aantal workouts en volume — Leanify houdt alles bij."
         }
       ]
     },
@@ -188,7 +188,7 @@
       ]
     },
     "cta": {
-      "heading1": "Download Vellic &",
+      "heading1": "Download Leanify &",
       "heading2": "werk met vertrouwen aan je doelen",
       "qrLabel": "QR CODE",
       "appStoreAlt": "Download in de App Store"
@@ -199,7 +199,7 @@
         {
           "name": "Sarah K.",
           "role": "Marathonloper",
-          "quote": "Vellic heeft rust en overzicht gebracht in mijn training. Ik zie mijn voortgang duidelijker en blijf makkelijker consistent."
+          "quote": "Leanify heeft rust en overzicht gebracht in mijn training. Ik zie mijn voortgang duidelijker en blijf makkelijker consistent."
         },
         {
           "name": "James R.",
@@ -209,7 +209,7 @@
         {
           "name": "Maria L.",
           "role": "Yoga-instructeur",
-          "quote": "Vellic voelt doordacht en in balans. Het ondersteunt mijn welzijnsroutine op een manier die heel natuurlijk aanvoelt."
+          "quote": "Leanify voelt doordacht en in balans. Het ondersteunt mijn welzijnsroutine op een manier die heel natuurlijk aanvoelt."
         },
         {
           "name": "David C.",
@@ -224,19 +224,19 @@
         {
           "name": "Tom W.",
           "role": "Recreatieve sporter",
-          "quote": "Vellic helpt me om op koers te blijven zonder dat fitness ingewikkeld aanvoelt. Het past gewoon natuurlijk in mijn week."
+          "quote": "Leanify helpt me om op koers te blijven zonder dat fitness ingewikkeld aanvoelt. Het past gewoon natuurlijk in mijn week."
         }
       ]
     },
     "footer": {
-      "brand": "Vellic",
+      "brand": "Leanify",
       "tagline": "Een rustig en modern fitnessplatform dat je helpt te trainen met helderheid, consistentie en vertrouwen.",
       "productHeading": "Product",
       "productLinks": ["Functies", "Integraties", "Wat zit erin"],
       "connectHeading": "Verbinden",
       "newsletterHeading": "Blijf op de hoogte",
       "emailPlaceholder": "E-mailadres",
-      "copyright": "© 2024 Vellic Labs Inc. Alle rechten voorbehouden."
+      "copyright": "© 2024 Leanify Labs Inc. Alle rechten voorbehouden."
     }
   }
 }
