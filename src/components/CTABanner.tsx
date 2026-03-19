@@ -36,7 +36,7 @@ const CTABanner = () => {
             </div>
             <a
               href="#"
-              className="rounded-full font-semibold px-8 py-4 text-lg bg-background text-foreground hover:bg-background/90 transition-colors"
+              className="rounded-full font-semibold px-8 py-4 text-lg bg-background text-primary hover:bg-background/90 transition-colors"
             >
               {t.nav.downloadApp}
             </a>
