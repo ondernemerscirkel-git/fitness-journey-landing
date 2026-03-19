@@ -3,6 +3,10 @@ import { Moon, Hand, BarChart3 } from "lucide-react";
 import type { ReactNode } from "react";
 import { useTranslations } from "@/i18n/useTranslations";
 
+import mockupProfile from "@/assets/mockup-profile.png";
+import mockupWorkout from "@/assets/mockup-workout.png";
+import mockupAnalytics from "@/assets/mockup-analytics.png";
+
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
   whileInView: { opacity: 1, y: 0 },
@@ -14,9 +18,10 @@ interface BenefitCardProps {
   icon: ReactNode;
   title: string;
   desc: string;
+  image: string;
 }
 
-const BenefitCard = ({ icon, title, desc }: BenefitCardProps) => (
+const BenefitCard = ({ icon, title, desc, image }: BenefitCardProps) => (
   <motion.div
     {...fadeIn}
     whileHover={{ y: -4 }}
@@ -27,21 +32,14 @@ const BenefitCard = ({ icon, title, desc }: BenefitCardProps) => (
     </div>
     <h3 className="text-xl font-display font-bold mb-3 text-foreground">{title}</h3>
     <p className="text-muted-foreground text-sm leading-relaxed font-body mb-8">{desc}</p>
-    <div className="mt-auto mx-auto w-44 h-[260px] bg-foreground rounded-t-[24px] shadow-elevated flex items-center justify-center">
-      <div className="w-[80%] h-[80%] rounded-t-[16px] bg-card/15 flex flex-col items-center pt-6 gap-2">
-        <div className="w-10 h-10 rounded-xl bg-primary/30" />
-        <div className="w-16 h-1.5 rounded bg-background/15" />
-        <div className="w-full px-3 mt-4 space-y-1.5">
-          <div className="h-4 rounded bg-background/10" />
-          <div className="h-4 rounded bg-background/10" />
-          <div className="h-4 rounded bg-primary/15" />
-        </div>
-      </div>
+    <div className="mt-auto mx-auto w-44 h-[260px] rounded-t-[24px] shadow-elevated overflow-hidden">
+      <img src={image} alt={title} className="w-full h-full object-cover object-top" />
     </div>
   </motion.div>
 );
 
 const icons = [<Moon size={22} />, <Hand size={22} />, <BarChart3 size={22} />];
+const images = [mockupProfile, mockupWorkout, mockupAnalytics];
 
 const Benefits = () => {
   const t = useTranslations();
@@ -57,7 +55,7 @@ const Benefits = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {t.benefits.cards.map((card, i) => (
-            <BenefitCard key={i} icon={icons[i]} title={card.title} desc={card.desc} />
+            <BenefitCard key={i} icon={icons[i]} title={card.title} desc={card.desc} image={images[i]} />
           ))}
         </div>
       </div>
