@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import { Apple, Play } from "lucide-react";
 
+const ease = [0.16, 1, 0.3, 1] as const;
 const fadeIn = {
   initial: { opacity: 0, y: 24 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true },
-  transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] as const as const },
+  transition: { duration: 0.7, ease },
 };
 
 const Hero = () => (
