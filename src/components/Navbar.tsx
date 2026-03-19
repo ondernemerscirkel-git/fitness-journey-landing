@@ -90,22 +90,49 @@ const Navbar = () => {
           </motion.div>
 
           <div className="hidden md:flex items-center gap-3">
-            <motion.button
-              whileTap={{ scale: 0.95 }}
-              onClick={toggleLanguage}
-              className="rounded-full font-semibold text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5 border border-border"
-              animate={{
-                paddingLeft: scrolled ? "0.75rem" : "1rem",
-                paddingRight: scrolled ? "0.75rem" : "1rem",
-                paddingTop: scrolled ? "0.5rem" : "0.625rem",
-                paddingBottom: scrolled ? "0.5rem" : "0.625rem",
-                fontSize: scrolled ? "0.8rem" : "0.875rem",
-              }}
-              transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            >
-              <Globe size={16} />
-              {locale === "en" ? "NL" : "EN"}
-            </motion.button>
+            <div className="relative">
+              <motion.button
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setLangOpen(!langOpen)}
+                className="rounded-full font-semibold text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5 border border-border"
+                animate={{
+                  paddingLeft: scrolled ? "0.75rem" : "1rem",
+                  paddingRight: scrolled ? "0.75rem" : "1rem",
+                  paddingTop: scrolled ? "0.5rem" : "0.625rem",
+                  paddingBottom: scrolled ? "0.5rem" : "0.625rem",
+                  fontSize: scrolled ? "0.8rem" : "0.875rem",
+                }}
+                transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+              >
+                <Globe size={16} />
+                {locale === "en" ? "EN" : "NL"}
+              </motion.button>
+
+              <AnimatePresence>
+                {langOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -4, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -4, scale: 0.95 }}
+                    transition={{ duration: 0.15 }}
+                    className="absolute top-full right-0 mt-2 bg-background border border-border rounded-xl shadow-elevated overflow-hidden min-w-[120px] z-50"
+                  >
+                    <button
+                      onClick={() => switchTo("en")}
+                      className={`w-full text-left px-4 py-2.5 text-sm font-body transition-colors ${locale === "en" ? "text-primary font-semibold bg-primary/5" : "text-muted-foreground hover:text-foreground hover:bg-muted"}`}
+                    >
+                      English
+                    </button>
+                    <button
+                      onClick={() => switchTo("nl")}
+                      className={`w-full text-left px-4 py-2.5 text-sm font-body transition-colors ${locale === "nl" ? "text-primary font-semibold bg-primary/5" : "text-muted-foreground hover:text-foreground hover:bg-muted"}`}
+                    >
+                      Nederlands
+                    </button>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
 
             <motion.button
               whileTap={{ scale: 0.95 }}
