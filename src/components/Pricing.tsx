@@ -10,9 +10,8 @@ const fadeIn = {
 
 const features = [
   { icon: Dumbbell, label: "Full Workout Library" },
-  { icon: Brain, label: "AI-Powered Coaching" },
   { icon: BarChart3, label: "Advanced Analytics" },
-  { icon: Sparkles, label: "Personalized Plans" },
+  { icon: Brain, label: "AI-Powered Benchpress" },
 ];
 
 const Pricing = () => (
@@ -40,7 +39,7 @@ const Pricing = () => (
         tool, every insight — yours from day one, forever.
       </motion.p>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
         {features.map((f, i) => (
           <motion.div
             key={f.label}
