@@ -68,8 +68,9 @@ const Features = () => {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-          <div className="md:col-span-3 flex flex-col gap-6">
+        {/* Desktop: 3-column with phone center */}
+        <div className="hidden lg:grid grid-cols-12 gap-6">
+          <div className="col-span-3 flex flex-col gap-6">
             {t.features.cards.slice(0, 2).map((card, i) => (
               <FeatureCard key={i} icon={cardIcons[i]} title={card.title} desc={card.desc} />
             ))}
@@ -77,7 +78,7 @@ const Features = () => {
 
           <motion.div
             {...fadeIn}
-            className="md:col-span-6 bg-card rounded-[32px] p-8 md:p-12 flex flex-col items-center overflow-hidden min-h-[500px] md:min-h-[600px]"
+            className="col-span-6 bg-card rounded-[32px] p-12 flex flex-col items-center overflow-hidden min-h-[600px]"
           >
             <AnimatePresence mode="wait">
               <motion.div
@@ -97,7 +98,7 @@ const Features = () => {
               </motion.div>
             </AnimatePresence>
 
-            <div className="relative w-56 md:w-64 flex-1 mt-6">
+            <div className="relative w-64 flex-1 mt-6">
               <AnimatePresence mode="wait">
                 <motion.img
                   key={active}
@@ -125,7 +126,72 @@ const Features = () => {
             </div>
           </motion.div>
 
-          <div className="md:col-span-3 flex flex-col gap-6">
+          <div className="col-span-3 flex flex-col gap-6">
+            {t.features.cards.slice(2, 4).map((card, i) => (
+              <FeatureCard key={i} icon={cardIcons[i + 2]} title={card.title} desc={card.desc} />
+            ))}
+          </div>
+        </div>
+
+        {/* Tablet/Mobile: cards grid + full-width phone */}
+        <div className="lg:hidden flex flex-col gap-6">
+          <div className="grid grid-cols-2 gap-6">
+            {t.features.cards.slice(0, 2).map((card, i) => (
+              <FeatureCard key={i} icon={cardIcons[i]} title={card.title} desc={card.desc} />
+            ))}
+          </div>
+
+          <motion.div
+            {...fadeIn}
+            className="bg-card rounded-[32px] p-8 flex flex-col items-center overflow-hidden min-h-[500px]"
+          >
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={active}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.8, ease: "easeInOut" }}
+                className="text-center"
+              >
+                <h3 className="text-2xl font-display font-bold mb-2 text-foreground">
+                  {mockups[active].title}
+                </h3>
+                <p className="text-muted-foreground font-body text-sm">
+                  {mockups[active].desc}
+                </p>
+              </motion.div>
+            </AnimatePresence>
+
+            <div className="relative w-56 sm:w-64 flex-1 mt-6">
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={active}
+                  src={mockupImages[active]}
+                  alt={mockups[active].title}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.8, ease: "easeInOut" }}
+                  className="w-full h-full object-contain object-top"
+                />
+              </AnimatePresence>
+            </div>
+
+            <div className="flex gap-2 mt-4">
+              {mockups.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setActive(i)}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    i === active ? "bg-primary w-6" : "bg-muted-foreground/30"
+                  }`}
+                />
+              ))}
+            </div>
+          </motion.div>
+
+          <div className="grid grid-cols-2 gap-6">
             {t.features.cards.slice(2, 4).map((card, i) => (
               <FeatureCard key={i} icon={cardIcons[i + 2]} title={card.title} desc={card.desc} />
             ))}
