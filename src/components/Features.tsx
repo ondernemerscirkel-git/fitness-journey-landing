@@ -35,7 +35,7 @@ const FeatureCard = ({ icon, title, desc }: FeatureCardProps) => (
 
 const cardIcons = [
   <Activity size={22} />,
-  <Utensils size={22} />,
+  <Target size={22} />,
   <TrendingUp size={22} />,
   <Bell size={22} />,
 ];
