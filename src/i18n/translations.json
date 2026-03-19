@@ -2,7 +2,7 @@
   "en": {
     "nav": {
       "brand": "Vellic",
-      "links": ["Home", "Features", "Pricing", "Testimonials"],
+      "links": ["Home", "Features", "What's Included", "Testimonials"],
       "downloadApp": "Download App"
     },
     "hero": {
@@ -59,10 +59,10 @@
       ]
     },
     "pricing": {
-      "badge": "Completely Free",
+      "badge": "No Strings Attached",
       "heading1": "Everything You Need,",
       "heading2": "Included from Day One",
-      "subtitle": "No subscriptions, no hidden upgrades, and no locked features. Just a complete fitness experience designed to support you from the very beginning.",
+      "subtitle": "No barriers, no locked features, and no surprises down the road. Just a complete fitness experience that's fully yours from the moment you start.",
       "features": ["Complete Workout Library", "Advanced Progress Insights", "AI-Powered Bench Press Support"]
     },
     "cta": {
@@ -110,7 +110,7 @@
       "brand": "Vellic",
       "tagline": "A calm, modern fitness platform built to help you train with clarity, consistency, and confidence.",
       "productHeading": "Product",
-      "productLinks": ["Features", "Integrations", "Pricing", "Changelog"],
+      "productLinks": ["Features", "Integrations", "What's Included", "Changelog"],
       "connectHeading": "Connect",
       "newsletterHeading": "Stay Updated",
       "emailPlaceholder": "Email address",
@@ -120,7 +120,7 @@
   "nl": {
     "nav": {
       "brand": "Vellic",
-      "links": ["Home", "Functies", "Prijzen", "Getuigenissen"],
+      "links": ["Home", "Functies", "Wat zit erin", "Getuigenissen"],
       "downloadApp": "Download App"
     },
     "hero": {
@@ -177,10 +177,10 @@
       ]
     },
     "pricing": {
-      "badge": "Volledig gratis",
+      "badge": "Zonder verplichtingen",
       "heading1": "Alles wat je nodig hebt,",
       "heading2": "vanaf dag één inbegrepen",
-      "subtitle": "Geen abonnementen, geen verborgen upgrades en geen afgesloten functies. Gewoon een complete fitnesservaring die je vanaf het begin ondersteunt.",
+      "subtitle": "Geen drempels, geen afgesloten functies en geen verrassingen achteraf. Gewoon een complete fitnesservaring die volledig van jou is vanaf het moment dat je begint.",
       "features": [
         "Volledige workoutbibliotheek",
         "Geavanceerde voortgangsinzichten",
@@ -232,7 +232,7 @@
       "brand": "Vellic",
       "tagline": "Een rustig en modern fitnessplatform dat je helpt te trainen met helderheid, consistentie en vertrouwen.",
       "productHeading": "Product",
-      "productLinks": ["Functies", "Integraties", "Prijzen", "Wijzigingslog"],
+      "productLinks": ["Functies", "Integraties", "Wat zit erin", "Wijzigingslog"],
       "connectHeading": "Verbinden",
       "newsletterHeading": "Blijf op de hoogte",
       "emailPlaceholder": "E-mailadres",
