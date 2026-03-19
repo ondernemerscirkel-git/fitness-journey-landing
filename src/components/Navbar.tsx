@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import appStoreBadge from "@/assets/app-store-badge.png";
-import { useTranslations } from "@/i18n/useTranslations";
+import { useTranslations, useLocale } from "@/i18n/useTranslations";
 
 const Navbar = () => {
   const t = useTranslations();
