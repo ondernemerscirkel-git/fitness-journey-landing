@@ -1,13 +1,21 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import appStoreBadge from "@/assets/app-store-badge.png";
-import { useTranslations } from "@/i18n/useTranslations";
+import { useTranslations, useLocale } from "@/i18n/useTranslations";
 
 const Navbar = () => {
   const t = useTranslations();
+  const locale = useLocale();
+  const navigate = useNavigate();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const toggleLanguage = () => {
+    const hash = window.location.hash;
+    navigate(locale === "en" ? `/nl${hash}` : `/${hash}`);
+  };
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 100);
@@ -73,21 +81,40 @@ const Navbar = () => {
             ))}
           </motion.div>
 
-          <motion.button
-            whileTap={{ scale: 0.95 }}
-            className="hidden md:block rounded-full font-semibold text-foreground hover:opacity-90 transition-opacity"
-            style={{ background: "linear-gradient(135deg, hsl(var(--vita-periwinkle)), hsl(var(--primary) / 0.35))" }}
-            animate={{
-              paddingLeft: scrolled ? "1.5rem" : "2rem",
-              paddingRight: scrolled ? "1.5rem" : "2rem",
-              paddingTop: scrolled ? "0.625rem" : "0.875rem",
-              paddingBottom: scrolled ? "0.625rem" : "0.875rem",
-              fontSize: scrolled ? "0.875rem" : "1rem",
-            }}
-            transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-          >
-            {t.nav.downloadApp}
-          </motion.button>
+          <div className="hidden md:flex items-center gap-3">
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              onClick={toggleLanguage}
+              className="rounded-full font-semibold text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5 border border-border"
+              animate={{
+                paddingLeft: scrolled ? "0.75rem" : "1rem",
+                paddingRight: scrolled ? "0.75rem" : "1rem",
+                paddingTop: scrolled ? "0.5rem" : "0.625rem",
+                paddingBottom: scrolled ? "0.5rem" : "0.625rem",
+                fontSize: scrolled ? "0.8rem" : "0.875rem",
+              }}
+              transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+            >
+              <Globe size={16} />
+              {locale === "en" ? "NL" : "EN"}
+            </motion.button>
+
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              className="rounded-full font-semibold text-foreground hover:opacity-90 transition-opacity"
+              style={{ background: "linear-gradient(135deg, hsl(var(--vita-periwinkle)), hsl(var(--primary) / 0.35))" }}
+              animate={{
+                paddingLeft: scrolled ? "1.5rem" : "2rem",
+                paddingRight: scrolled ? "1.5rem" : "2rem",
+                paddingTop: scrolled ? "0.625rem" : "0.875rem",
+                paddingBottom: scrolled ? "0.625rem" : "0.875rem",
+                fontSize: scrolled ? "0.875rem" : "1rem",
+              }}
+              transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+            >
+              {t.nav.downloadApp}
+            </motion.button>
+          </div>
 
           <button
             className="md:hidden text-foreground relative z-[60]"
@@ -141,7 +168,16 @@ const Navbar = () => {
                 </motion.a>
               ))}
 
-              <motion.div variants={itemVariant} className="mt-8">
+              <motion.button
+                variants={itemVariant}
+                onClick={() => { toggleLanguage(); setMobileOpen(false); }}
+                className="mt-4 flex items-center gap-2 text-muted-foreground font-body text-lg border border-border rounded-full px-6 py-2.5 hover:text-foreground transition-colors"
+              >
+                <Globe size={18} />
+                {locale === "en" ? "Nederlands" : "English"}
+              </motion.button>
+
+              <motion.div variants={itemVariant} className="mt-4">
                 <a href="#" className="inline-block">
                   <img src={appStoreBadge} alt={t.hero.appStoreAlt} className="h-12 w-auto" />
                 </a>
