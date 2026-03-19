@@ -33,10 +33,6 @@ const FeatureCard = ({ icon, title, desc }: FeatureCardProps) => (
   </motion.div>
 );
 
-const Features = () => {
-  const t = useTranslations();
-  const locale = useLocale();
-  const mockupImages = screenshots[locale].mockups;
 const cardIcons = [
   <Activity size={22} />,
   <Utensils size={22} />,
@@ -46,6 +42,8 @@ const cardIcons = [
 
 const Features = () => {
   const t = useTranslations();
+  const locale = useLocale();
+  const mockupImages = screenshots[locale].mockups;
   const [active, setActive] = useState(0);
   const mockups = t.features.mockups;
 
