@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X, Globe, ChevronRight } from "lucide-react";
 import appStoreBadge from "@/assets/app-store-badge.png";
 import { useTranslations, useLocale } from "@/i18n/useTranslations";
 
