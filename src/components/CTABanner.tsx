@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { ChevronRight } from "lucide-react";
 import { useTranslations } from "@/i18n/useTranslations";
 
 const fadeIn = {
