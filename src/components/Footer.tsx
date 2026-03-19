@@ -38,16 +38,9 @@ const Footer = () => {
 
         <div>
           <h4 className="font-display font-bold mb-6">{t.footer.newsletterHeading}</h4>
-          <div className="flex gap-2">
-            <input
-              type="email"
-              placeholder={t.footer.emailPlaceholder}
-              className="bg-background/5 border border-background/10 rounded-xl px-4 py-2.5 text-sm w-full focus:outline-none focus:border-primary font-body placeholder:text-background/30"
-            />
-            <button className="bg-primary p-2.5 rounded-xl text-primary-foreground hover:opacity-90 transition-opacity">
-              <ArrowRight size={20} />
-            </button>
-          </div>
+          <p className="text-background/50 text-sm leading-relaxed font-body">
+            {t.footer.tagline}
+          </p>
         </div>
       </div>
 
