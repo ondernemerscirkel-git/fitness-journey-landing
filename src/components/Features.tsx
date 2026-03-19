@@ -144,7 +144,7 @@ const Features = () => {
             {...fadeIn}
             className="bg-card rounded-[32px] p-8 flex flex-col items-center overflow-hidden min-h-[500px]"
           >
-            <div className="relative h-14">
+            <div className="relative w-full h-20">
               <AnimatePresence initial={false}>
                 <motion.div
                   key={active}
@@ -152,7 +152,7 @@ const Features = () => {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.8, ease: "easeInOut" }}
-                  className="absolute inset-0 text-center"
+                  className="absolute inset-0 flex flex-col items-center justify-start text-center"
                 >
                   <h3 className="text-2xl font-display font-bold mb-2 text-foreground">
                     {mockups[active].title}
