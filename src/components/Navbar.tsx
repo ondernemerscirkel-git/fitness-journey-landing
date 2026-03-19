@@ -34,7 +34,7 @@ const Navbar = () => {
   return (
     <>
       <motion.nav
-        className="fixed top-0 w-full z-50"
+        className={`fixed top-0 w-full ${mobileOpen ? "z-[60]" : "z-50"}`}
         animate={{
           backgroundColor: scrolled ? "hsla(228, 33%, 97%, 0.8)" : "transparent",
           backdropFilter: scrolled ? "blur(16px)" : "blur(0px)",
@@ -156,16 +156,7 @@ const Navbar = () => {
                 </motion.a>
               ))}
 
-              <motion.div variants={itemVariant} className="mt-8 w-full max-w-xs">
-                <button
-                  className="bg-foreground text-background px-8 py-4 rounded-full text-base font-semibold w-full"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  Download App
-                </button>
-              </motion.div>
-
-              <motion.div variants={itemVariant} className="mt-4">
+              <motion.div variants={itemVariant} className="mt-8">
                 <a href="#" className="inline-block">
                   <img src={appStoreBadge} alt="Download on the App Store" className="h-12 w-auto" />
                 </a>
