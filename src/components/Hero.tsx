@@ -68,11 +68,14 @@ const Hero = () => (
         transition={{ delay: 0.2, duration: 0.9, ease }}
         className="relative max-w-5xl mx-auto"
       >
-        <img
-          src={heroDesktop}
-          alt="VITA fitness app screens showing workout tracking, progress analytics, and rest timer"
-          className="w-full h-auto relative z-10"
-        />
+        <picture>
+          <source media="(min-width: 768px)" srcSet={heroDesktop} />
+          <img
+            src={heroMobile}
+            alt="VITA fitness app screens showing workout tracking, progress analytics, and rest timer"
+            className="w-full h-auto relative z-10"
+          />
+        </picture>
       </motion.div>
     </div>
   </section>
