@@ -34,7 +34,7 @@ const Navbar = () => {
   return (
     <>
       <motion.nav
-        className="fixed top-0 w-full z-50"
+        className={`fixed top-0 w-full ${mobileOpen ? "z-[60]" : "z-50"}`}
         animate={{
           backgroundColor: scrolled ? "hsla(228, 33%, 97%, 0.8)" : "transparent",
           backdropFilter: scrolled ? "blur(16px)" : "blur(0px)",
