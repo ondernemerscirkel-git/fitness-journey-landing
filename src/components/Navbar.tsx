@@ -180,7 +180,7 @@ const Navbar = () => {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            className="fixed inset-0 z-[55] md:hidden flex flex-col overflow-hidden"
+            className="fixed inset-0 z-[55] lg:hidden flex flex-col overflow-hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
