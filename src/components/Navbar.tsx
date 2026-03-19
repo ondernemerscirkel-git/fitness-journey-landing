@@ -57,13 +57,18 @@ const Navbar = () => {
           animate={{ height: scrolled ? 60 : 104 }}
           transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
         >
-          <motion.div
+          <a
+            href={locale === "nl" ? "/nl" : "/"}
             className="font-display font-bold tracking-tighter text-foreground relative z-[60]"
-            animate={{ fontSize: scrolled ? "1.25rem" : "1.75rem" }}
-            transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
           >
-            {t.nav.brand}
-          </motion.div>
+            <motion.span
+              animate={{ fontSize: scrolled ? "1.25rem" : "1.75rem" }}
+              transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+              className="inline-block"
+            >
+              {t.nav.brand}
+            </motion.span>
+          </a>
 
           <motion.div
             className="hidden md:flex items-center gap-10 font-medium text-muted-foreground"
