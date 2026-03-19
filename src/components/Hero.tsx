@@ -5,7 +5,7 @@ const fadeIn = {
   initial: { opacity: 0, y: 24 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true },
-  transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] as const },
+  transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] as const as const },
 };
 
 const Hero = () => (
@@ -22,7 +22,7 @@ const Hero = () => (
 
       <motion.p
         {...fadeIn}
-        transition={{ delay: 0.1, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ delay: 0.1, duration: 0.7, ease: [0.16, 1, 0.3, 1] as const }}
         className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 font-body"
       >
         A precision-engineered platform for tracking, analyzing, and optimizing
@@ -31,7 +31,7 @@ const Hero = () => (
 
       <motion.div
         {...fadeIn}
-        transition={{ delay: 0.2, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ delay: 0.2, duration: 0.7, ease: [0.16, 1, 0.3, 1] as const }}
         className="flex flex-col sm:flex-row justify-center gap-4 mb-20"
       >
         <motion.button
@@ -58,7 +58,7 @@ const Hero = () => (
             initial={{ y: 120, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.3, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ delay: 0.3, duration: 0.8, ease: [0.16, 1, 0.3, 1] as const }}
             className="w-52 md:w-64 h-[380px] md:h-[500px] bg-foreground rounded-[36px] border-[6px] border-foreground shadow-elevated absolute -left-4 md:left-16 z-10 hidden md:flex items-center justify-center"
             style={{ transform: "rotate(-10deg)" }}
           >
@@ -74,7 +74,7 @@ const Hero = () => (
             initial={{ y: 160, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.15, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ delay: 0.15, duration: 0.8, ease: [0.16, 1, 0.3, 1] as const }}
             className="w-60 md:w-72 h-[420px] md:h-[550px] bg-foreground rounded-[40px] border-[7px] border-foreground shadow-elevated z-20 flex items-center justify-center"
           >
             <div className="w-[85%] h-[90%] rounded-[30px] bg-card/20 flex flex-col items-center justify-center gap-4">
@@ -94,7 +94,7 @@ const Hero = () => (
             initial={{ y: 120, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.3, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ delay: 0.3, duration: 0.8, ease: [0.16, 1, 0.3, 1] as const }}
             className="w-52 md:w-64 h-[380px] md:h-[500px] bg-foreground rounded-[36px] border-[6px] border-foreground shadow-elevated absolute -right-4 md:right-16 z-10 hidden md:flex items-center justify-center"
             style={{ transform: "rotate(10deg)" }}
           >
