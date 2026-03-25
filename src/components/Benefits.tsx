@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from "framer-motion";
 import { Moon, Hand, BarChart3 } from "lucide-react";
 import type { ReactNode } from "react";
