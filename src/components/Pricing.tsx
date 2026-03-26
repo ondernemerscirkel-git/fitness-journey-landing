@@ -43,6 +43,14 @@ const Pricing = () => {
     const video = videoRef.current;
     if (!container || !video) return;
 
+    // iOS ignores preload and blocks seeking until playback has started.
+    // autoPlay (muted + playsInline) unlocks it; pause immediately so scroll controls frames.
+    const pauseOnReady = () => {
+      video.pause();
+      video.currentTime = 0;
+    };
+    video.addEventListener("canplay", pauseOnReady, { once: true });
+
     const update = () => {
       const rect = container.getBoundingClientRect();
       const scrollableDistance = rect.height - (window.innerHeight - NAVBAR_HEIGHT);
@@ -70,6 +78,7 @@ const Pricing = () => {
     update();
 
     return () => {
+      video.removeEventListener("canplay", pauseOnReady);
       window.removeEventListener("scroll", onScroll);
       cancelAnimationFrame(rafRef.current);
     };
@@ -100,7 +109,7 @@ const Pricing = () => {
               src={noStringsVideo}
               muted
               playsInline
-              loop
+              autoPlay
               preload="auto"
               style={{
                 opacity: 0.7,
