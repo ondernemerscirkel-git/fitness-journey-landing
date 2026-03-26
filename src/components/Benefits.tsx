@@ -28,8 +28,7 @@ const BenefitCard = ({ icon, title, desc, image, index }: BenefitCardProps & { i
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, amount: 0.4 }}
     transition={{ duration: 1.4, delay: index * 0.3, ease: [0.25, 0.1, 0.25, 1] }}
-    whileHover={{ y: -4 }}
-    className="bg-card rounded-[32px] p-8 pb-0 overflow-hidden flex flex-col transition-shadow hover:shadow-card"
+    className="bg-card rounded-[32px] p-8 pb-0 overflow-hidden flex flex-col transition-shadow"
   >
     <div className="w-12 h-12 bg-primary rounded-2xl flex items-center justify-center text-primary-foreground mb-6">
       {icon}

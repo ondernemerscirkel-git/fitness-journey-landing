@@ -22,8 +22,7 @@ interface FeatureCardProps {
 const FeatureCard = ({ icon, title, desc }: FeatureCardProps) => (
   <motion.div
     {...fadeIn}
-    whileHover={{ y: -2 }}
-    className="bg-card p-8 rounded-[32px] h-full transition-shadow hover:shadow-card"
+    className="bg-card p-8 rounded-[32px] h-full transition-shadow"
   >
     <div className="w-12 h-12 bg-primary rounded-2xl flex items-center justify-center text-primary-foreground mb-6">
       {icon}

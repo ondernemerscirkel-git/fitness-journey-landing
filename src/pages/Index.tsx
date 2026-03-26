@@ -77,7 +77,7 @@ const Index = () => {
   }, [hash]);
 
   return (
-    <div className="bg-background text-foreground selection:bg-primary selection:text-primary-foreground">
+    <div className="bg-background text-foreground selection:bg-primary selection:text-primary-foreground [overflow-x:clip]">
       <SEO
         title={currentSeo.title}
         description={currentSeo.description}
@@ -101,9 +101,11 @@ const Index = () => {
       <Features />
       <Benefits />
       <Pricing />
-      <CTABanner />
-      <Testimonials />
-      <Footer />
+      <div className="relative z-10 bg-background">
+        <CTABanner />
+        <Testimonials />
+        <Footer />
+      </div>
     </div>
   );
 };
