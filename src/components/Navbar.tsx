@@ -14,8 +14,22 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
   const switchTo = (lang: "en" | "nl") => {
+    const pathname = window.location.pathname;
     const hash = window.location.hash;
-    navigate(lang === "nl" ? `/nl${hash}` : `/${hash}`);
+    const search = window.location.search;
+
+    let newPath = pathname;
+    if (lang === "nl") {
+      if (!pathname.startsWith("/nl")) {
+        newPath = `/nl${pathname === "/" ? "" : pathname}`;
+      }
+    } else {
+      if (pathname.startsWith("/nl")) {
+        newPath = pathname.substring(3) || "/";
+      }
+    }
+
+    navigate(`${newPath}${search}${hash}`);
     setLangOpen(false);
   };
 
