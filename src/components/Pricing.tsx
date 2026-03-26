@@ -44,12 +44,18 @@ const Pricing = () => {
     if (!container || !video) return;
 
     // iOS ignores preload and blocks seeking until playback has started.
-    // autoPlay (muted + playsInline) unlocks it; pause immediately so scroll controls frames.
-    const pauseOnReady = () => {
-      video.pause();
-      video.currentTime = 0;
+    // Unlock on first touch (no autoPlay = no native play-button overlay).
+    let unlocked = false;
+    const unlockVideo = async () => {
+      if (unlocked) return;
+      unlocked = true;
+      try {
+        await video.play();
+        video.pause();
+        video.currentTime = 0;
+      } catch (_) { }
     };
-    video.addEventListener("canplay", pauseOnReady, { once: true });
+    window.addEventListener("touchstart", unlockVideo, { once: true, passive: true });
 
     const update = () => {
       const rect = container.getBoundingClientRect();
@@ -78,7 +84,7 @@ const Pricing = () => {
     update();
 
     return () => {
-      video.removeEventListener("canplay", pauseOnReady);
+      window.removeEventListener("touchstart", unlockVideo);
       window.removeEventListener("scroll", onScroll);
       cancelAnimationFrame(rafRef.current);
     };
@@ -86,8 +92,8 @@ const Pricing = () => {
 
   // CSS sticky: sectionHeight = stickyHeight + scroll range
   // marginBottom = 0: CTABanner arrives at viewport bottom exactly when panel unsticks
-  const sectionHeight = isMobile ? "calc(220vh - 60px)" : "calc(300vh - 60px)";
-  const stickyHeight = "calc(100vh - 60px)";
+  const sectionHeight = isMobile ? "calc(220svh - 60px)" : "calc(300vh - 60px)";
+  const stickyHeight = isMobile ? "calc(100svh - 60px)" : "calc(100vh - 60px)";
 
   return (
     <div
@@ -97,7 +103,7 @@ const Pricing = () => {
       style={{ height: sectionHeight }}
     >
       <div
-        className="sticky left-0 right-0 flex flex-col items-center justify-start pt-10 md:pt-16 bg-background z-[40]"
+        className="sticky left-0 right-0 flex flex-col items-center justify-start pt-6 md:pt-16 bg-background z-[40]"
         style={{ top: NAVBAR_HEIGHT, height: stickyHeight }}
       >
         {/* inner clip wrapper — visual layers only */}
@@ -109,7 +115,6 @@ const Pricing = () => {
               src={noStringsVideo}
               muted
               playsInline
-              autoPlay
               preload="auto"
               style={{
                 opacity: 0.7,
@@ -143,7 +148,7 @@ const Pricing = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-display font-semibold mb-4"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-display font-semibold mb-2 md:mb-4"
           >
             <Sparkles size={16} />
             {t.pricing.badge}
@@ -154,7 +159,7 @@ const Pricing = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
-            className="text-3xl md:text-6xl font-display font-bold text-foreground mb-3 leading-tight md:leading-[1.3]"
+            className="text-3xl md:text-6xl font-display font-bold text-foreground mb-2 md:mb-3 leading-tight md:leading-[1.3]"
           >
             {t.pricing.heading1}
             <br />
@@ -166,7 +171,7 @@ const Pricing = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.55, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="text-sm md:text-lg text-foreground/80 font-body max-w-sm md:max-w-xl mx-auto leading-relaxed mb-7 px-4 py-2.5 rounded-2xl"
+            className="text-sm md:text-lg text-foreground/80 font-body max-w-sm md:max-w-xl mx-auto leading-relaxed mb-8 md:mb-7 px-4 py-2 md:py-2.5 rounded-2xl"
             style={{
               background: "hsl(var(--background) / 0.6)",
               backdropFilter: "blur(12px)",
@@ -176,7 +181,7 @@ const Pricing = () => {
             {t.pricing.subtitle}
           </motion.p>
 
-          <div className="grid grid-cols-3 gap-3 w-full max-w-xs md:max-w-2xl mx-auto">
+          <div className="grid grid-cols-3 gap-3 w-full max-w-xs md:max-w-2xl mx-auto mt-24 md:mt-0">
             {t.pricing.features.map((label, i) => {
               const Icon = featureIcons[i];
               const { scale, opacity } = cardMotion[i];

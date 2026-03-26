@@ -117,3 +117,12 @@
 .btn-gradient-animate:hover {
   background: hsl(var(--primary) / 0.25);
 }
+
+/* Remove iOS/Safari native play button overlay on video elements */
+video::-webkit-media-controls-start-playback-button {
+  display: none;
+  -webkit-appearance: none;
+}
+video::-webkit-media-controls {
+  display: none;
+}
