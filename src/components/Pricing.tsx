@@ -59,33 +59,35 @@ const Pricing = () => {
 
     const update = () => {
       const rect = container.getBoundingClientRect();
-      const scrollableDistance = rect.height - (window.innerHeight - NAVBAR_HEIGHT);
-      const scrolled = NAVBAR_HEIGHT - rect.top;
-      const progress = Math.max(0, Math.min(1, scrolled / scrollableDistance));
 
-      scrollProgress.set(progress);
+      // Only do work when the section is anywhere near the viewport
+      if (rect.bottom > 0 && rect.top < window.innerHeight) {
+        const scrollableDistance = rect.height - (window.innerHeight - NAVBAR_HEIGHT);
+        const scrolled = NAVBAR_HEIGHT - rect.top;
+        const progress = Math.max(0, Math.min(1, scrolled / scrollableDistance));
 
-      if (video.readyState >= 2 && video.duration) {
-        const threshold = isMobile ? 0.033 : 0.015;
-        const target = Math.min(progress * video.duration, video.duration - 0.05);
-        if (Math.abs(target - lastTimeRef.current) > threshold) {
-          video.currentTime = target;
-          lastTimeRef.current = target;
+        scrollProgress.set(progress);
+
+        if (video.readyState >= 2 && video.duration) {
+          // Tighter threshold = more frames rendered per scroll distance
+          const threshold = isMobile ? 0.016 : 0.008;
+          const target = Math.min(progress * video.duration, video.duration - 0.05);
+          if (Math.abs(target - lastTimeRef.current) > threshold) {
+            video.currentTime = target;
+            lastTimeRef.current = target;
+          }
         }
       }
-    };
 
-    const onScroll = () => {
-      cancelAnimationFrame(rafRef.current);
       rafRef.current = requestAnimationFrame(update);
     };
 
-    window.addEventListener("scroll", onScroll, { passive: true });
-    update();
+    // Continuous RAF loop — fires every display frame (60 or 120 Hz) instead of
+    // only on scroll events, giving the smoothest possible scrubbing.
+    rafRef.current = requestAnimationFrame(update);
 
     return () => {
       window.removeEventListener("touchstart", unlockVideo);
-      window.removeEventListener("scroll", onScroll);
       cancelAnimationFrame(rafRef.current);
     };
   }, [isMobile, scrollProgress]);
